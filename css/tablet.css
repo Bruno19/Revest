@@ -1,0 +1,96 @@
+
+.Centro{
+	width: 600px;
+	height: auto;
+	margin: auto;
+	position: relative;
+}
+
+.Logo{
+	width: 200px;
+	height: auto;
+	float: left;
+}
+
+nav{	
+	width: auto;
+	height: auto;
+	margin-top: 20px;
+	position: relative;
+	float: left;
+	clear: both;
+}
+
+.MenuSuperior{
+	list-style: none;
+}
+
+.MenuSuperior li{	
+	width: auto;
+	float: left;
+	margin-right: 20px;
+}
+
+.MenuSuperior li a{
+	color: #bebebe;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.MenuSuperior li a:hover{
+	color: #fdd631;
+}
+
+.RedesSociaisHeader{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: auto;
+}
+
+.IconesEsquerda{
+	float: left;
+	width:200px;
+	text-align: right;
+	padding-right: 10px;
+	padding-top: 2px;
+}
+
+.FormDireita{
+	float: right;
+	width:200px;
+	padding-top: 8px;
+}
+
+
+.RedesSociaisHeader .Icones{
+	padding-top: 5px;	
+}
+.RedesSociaisHeader input[type="text"]{
+	background: #bebebe;
+	padding: 4px 5px;
+	border: 0;
+	width: 160px;
+}
+
+.RedesSociaisHeader button{
+	width: 23px;
+	height: 24px;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	position: absolute;
+	margin-left: 5px;
+}
+
+.RedesSociaisHeader button img{
+	width: 100%;
+	height: auto;
+}
+
+.ImagemDestaqueTopo{	
+	width: 180px;
+	height: auto;
+	margin-right: 8px;
+}

@@ -1,0 +1,254 @@
+
+.Centro{
+	width: 1024px;
+	height: auto;
+	margin: auto;
+	position: relative;
+}
+
+.FundoConteudo{
+	width: 1004px !important;
+}
+
+.Logo{
+	width: 28%;
+	height: auto;
+	float: left;
+}
+
+nav{	
+	width: 60%;
+	height: auto;
+	margin-top: 20px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.MenuSuperior{
+	list-style: none;
+}
+
+.MenuSuperior li{
+	text-align: right;
+	width: 20%;
+	float: left;
+}
+
+.MenuSuperior li a{
+	color: #bebebe;
+	text-decoration: none;
+}
+
+.MenuSuperior li a:hover{
+	color: #fdd631;
+}
+
+.RedesSociaisHeader{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: auto;
+}
+
+.IconesEsquerda{
+	float: left;
+	width:200px;
+	text-align: right;
+	padding-right: 10px;
+	padding-top: 2px;
+}
+
+.FormDireita{
+	float: right;
+	width:200px;
+	padding-top: 8px;
+}
+
+
+.RedesSociaisHeader .Icones{
+	padding-top: 5px;	
+}
+.RedesSociaisHeader input[type="text"]{
+	background: #bebebe;
+	padding: 4px 5px;
+	border: 0;
+	width: 160px;
+}
+
+.RedesSociaisHeader button{
+	width: 23px;
+	height: 24px;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	position: absolute;
+	margin-left: 5px;
+}
+
+.RedesSociaisHeader button img{
+	width: 100%;
+	height: auto;
+}
+
+.ImagemDestaqueTopo{	
+	width: 330px;
+	height: auto;
+	margin-right: 8px;
+}
+
+.SubMenu{
+	padding: 5px 0;
+	margin-top: 10px;
+}
+
+.ListaSubMenu{
+	list-style: none;
+	width: 100%;
+	
+}
+
+.ListaSubMenu li{
+	float: left;
+	width: 12%;
+	color: #fff;
+	padding: 0px 2.5px;
+}
+
+.ListaSubMenu li img{
+	width: 30%;
+	height: 100%;
+}
+.ListaSubMenu li a{
+	color: #fff;
+}
+.ListaSubMenu li .TextoMenu{
+	float: right;
+	width: 68%;
+	height: auto;
+	font-size: 12px;
+}
+
+.FundoSubMenu{
+	float: left;
+	width: 30%;
+	height: 28px;
+}
+
+.f1{
+	background: url(../imagens/icones/prof.png) no-repeat;
+	background-size: 120% 120%;
+}
+
+.f2{
+	background: url(../imagens/icones/fabr.png) no-repeat;
+	background-size: 120% 110%;
+}
+
+.f3{
+	background: url(../imagens/icones/lojas.png) no-repeat;
+	background-size: 120% 120%;
+}
+
+.f4{
+	background: url(../imagens/icones/tec.png) no-repeat;
+	background-size: 120% 120%;
+}
+
+.f5{
+	background: url(../imagens/icones/ofer.png) no-repeat;
+	background-size: 120% 120%;
+}
+
+.f6{
+	background: url(../imagens/icones/even.png) no-repeat;
+	background-size: 120% 120%;
+}
+
+.f7{
+	background: url(../imagens/icones/doa.png) no-repeat;
+	background-size: 110% 110%;
+}
+
+.f8{
+	background: url(../imagens/icones/down.png) no-repeat;
+	background-size: 120% 120%;
+}
+
+.ListaSubMenu li a:hover{
+	color: #fdd631;
+}
+
+.ListaSubMenu li a:hover .f1{
+	background: url(../imagens/icones/prof_h.png) no-repeat;
+	background-size: 120% 120%;
+}
+.ListaSubMenu li a:hover .f2{
+	background: url(../imagens/icones/fabr_h.png) no-repeat;
+	background-size: 120% 110%;
+}
+.ListaSubMenu li a:hover .f3{
+	background: url(../imagens/icones/lojas_h.png) no-repeat;
+	background-size: 120% 120%;
+}
+.ListaSubMenu li a:hover .f4{
+	background: url(../imagens/icones/tec_h.png) no-repeat;
+	background-size: 120% 120%;
+}
+.ListaSubMenu li a:hover .f5{
+	background: url(../imagens/icones/ofer_h.png) no-repeat;
+	background-size: 120% 120%;
+}
+.ListaSubMenu li a:hover .f6{
+	background: url(../imagens/icones/even_h.png) no-repeat;
+	background-size: 120% 120%;
+}
+.ListaSubMenu li a:hover .f7{
+	background: url(../imagens/icones/doa_h.png) no-repeat;
+	background-size: 110% 110%;
+}
+.ListaSubMenu li a:hover .f8{
+	background: url(../imagens/icones/down_h.png) no-repeat;
+	background-size: 120% 120%;
+}
+
+.NoticiaDestaque1{
+	width: 100%;
+	height: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.OutrasNoticias{
+	width: 310px;
+	height: auto;
+	margin-right: 12px;
+	margin-left: 12px;
+	position: relative;
+	overflow: hidden;
+}
+
+.NoticiaDestaque1 img, .OutrasNoticias img{
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 1;
+}
+
+.NoticiaDestaque1 .Titulo, .OutrasNoticias .Titulo{
+	position: absolute;
+	width: 100%;
+	padding: 8px;
+	color: #eee;
+	background: rgba(0, 0, 0, 0.5);
+	bottom: 5px;
+	z-index: 10;
+	font-size: 15px;
+}
+
+.Propaganda1sl{
+	margin-left: 12px;
+	width: 64.2%;
+	height: auto;
+}
