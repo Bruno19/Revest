@@ -229,14 +229,14 @@ nav{
 	overflow: hidden;
 }
 
-.NoticiaDestaque1 img, .OutrasNoticias img{
+.NoticiaDestaque1 img, .OutrasNoticias img, .NoticiaDestaque2 img{
 	width: 100%;
 	height: auto;
 	position: relative;
 	z-index: 1;
 }
 
-.NoticiaDestaque1 .Titulo, .OutrasNoticias .Titulo{
+.NoticiaDestaque1 .Titulo, .OutrasNoticias .Titulo, .NoticiaDestaque2 .Titulo{
 	position: absolute;
 	width: 100%;
 	padding: 8px;
@@ -251,4 +251,95 @@ nav{
 	margin-left: 12px;
 	width: 64.2%;
 	height: auto;
+}
+
+.ListaUltimosCadastradosH{
+	background: #4f4f4f;
+	width: 23%;
+	height: auto;
+	padding: 0.5%;
+	margin-left: 0.8%;
+}
+
+.ListaUltimosCadastradosH h2{
+	font-size: 18px;
+	color: #dbbd39;
+	font-weight:100;
+}
+
+.ListaUltimosCadastradosH a{
+	color: #ccc;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.NoticiaDestaque2{
+	margin-top: 10px;
+	margin-left: 8px;
+	width: 650px;
+	height: 395px;
+	position: relative;
+	overflow: hidden;
+}
+
+.TopOutrasNot{
+	margin-top: 10px;
+}
+
+.BackGold{
+	background: #dbbd39;
+	height: 190px;
+}
+
+.BackGold .Doacao{
+	padding: 10px;
+}
+
+.BackGold .Doacao h2{
+	color: #383838;
+	font-weight: 100;
+	font-size: 20px;
+}
+
+.BackGold .Doacao a{
+	color: #fff;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.PaginadorHome{
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+	clear: both;
+}
+
+.PaginadorHome a{
+	color: #dbbd39;
+	font-family: Arial;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.ParceirosHome{
+	background: #888888;
+	width: 100%;
+	padding: 10px 0;
+}
+
+.ParceirosHome h2{
+	color: #dbbd39;
+	font-weight: 100;
+	font-family: arial;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+.ParceirosHome .LogoParceiroHome{
+	width: 20%;
+	height: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5%;
 }

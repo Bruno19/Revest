@@ -67,28 +67,143 @@
 				</div>
 			</div>
 		<?php endfor;?>
-		<div class="Propaganda1sl left">
-			<div id="demo" style="z-index: 0 !important;">
-				<div class="container">
-					<div class="row">
-						<div class="span12">
-							<div id="owl-demo" class="owl-carousel">
-								<!--Padrão de exibição-->								
-								<div class="item">
-									<img src="imagens/propaganda1.jpg" alt="banner" class="Banner"/>
+			<div class="Propaganda1sl left">
+				<div id="demo" style="z-index: 0 !important;">
+					<div class="container">
+						<div class="row">
+							<div class="span12">
+								<div id="owl-demo" class="owl-carousel">
+									<!--Padrão de exibição-->								
+									<div class="item">
+										<img src="imagens/propaganda1.jpg" alt="banner" class="Banner"/>
+									</div>
+									<div class="item">
+										<img src="imagens/propaganda1.jpg" alt="banner" class="Banner"/>
+									</div>								
 								</div>
-								<div class="item">
-									<img src="imagens/propaganda1.jpg" alt="banner" class="Banner"/>
-								</div>								
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 			<div class="esp"></div>
+			
+			
+			<div class="ListaUltimosCadastradosH left">
+				<h2>Profissionais IN CENA</h2>
+				<a href="#">Título do ultimo</a><br/>
+				<a href="#">Título do ultimo</a><br/>
+				<a href="#">Título do ultimo</a><br/>
+			</div>
+			
+			<div class="ListaUltimosCadastradosH left">
+				<h2>Fabricantes IN CENA</h2>
+				<a href="#">Título do ultimo</a><br/>
+				<a href="#">Título do ultimo</a><br/>
+				<a href="#">Título do ultimo</a><br/>
+			</div>
+			
+			<div class="ListaUltimosCadastradosH left">
+				<h2>Lojas IN CENA</h2>
+				<a href="#">Título do ultimo</a><br/>
+				<a href="#">Título do ultimo</a><br/>
+				<a href="#">Título do ultimo</a><br/>
+			</div>
+			
+			<div class="ListaUltimosCadastradosH left">
+				<h2>Ofertas IN CENA</h2>
+				<a href="#">Título do ultimo</a><br/>
+				<a href="#">Título do ultimo</a><br/>
+				<a href="#">Título do ultimo</a><br/>
+			</div>			
+			
+			<div class="esp"></div>
+			
+			<div class="NoticiaDestaque2 left" style="background: url(imagens/destaque2.jpg) no-repeat; background-size: 100% auto; background-position: center;">
+				
+				<div class="Titulo">
+					Título da matéria em destaque
+				</div>
+			</div>
+			
+			<div class="OutrasNoticias right TopOutrasNot">
+				<img src="imagens/materia.jpg" alt="noticia comum"/>
+				<div class="Titulo">
+					Título da matéria
+				</div>
+			</div>
+			<div class="OutrasNoticias right TopOutrasNot">
+				<img src="imagens/materia.jpg" alt="noticia comum"/>
+				<div class="Titulo">
+					Título da matéria
+				</div>
+			</div>
+			<div class="esp"></div>
+			<?php for($i=1; $i<=2; $i++):?>
+			<div class="OutrasNoticias left">
+				<img src="imagens/materia.jpg" alt="noticia comum"/>
+				<div class="Titulo">
+					Título da matéria
+				</div>
+			</div>
+			<?php endfor;?>
+			
+			<div class="OutrasNoticias left BackGold">
+				<div class="Doacao">
+					<h2>Doação IN CENA</h2>
+					<a href="#">Pisos</a><br/>
+					<a href="#">Marcenaria</a><br/>
+					<a href="#">Designer</a><br/>
+					<a href="#">Elétrica</a><br/>
+					<a href="#">Arquitetura</a><br/>
+					<a href="#">Paisagismo</a><br/>
+				</div>
+			</div>
+			<div class="esp"></div>
+			
+			
+			<?php for($i=1; $i<=2; $i++):?>
+			<div class="OutrasNoticias left">
+				<img src="imagens/materia.jpg" alt="noticia comum"/>
+				<div class="Titulo">
+					Título da matéria
+				</div>
+			</div>
+			<?php endfor;?>
+			
+			<div class="OutrasNoticias left">
+				<a href="#">
+					<img src="imagens/propaganda2.jpg" alt="Propaganda"/>
+				</a>
+			</div>
+			<div class="esp"></div>	
+			
+			
+			<?php for($i=1; $i<=3; $i++):?>
+			<div class="OutrasNoticias left">
+				<img src="imagens/materia.jpg" alt="noticia comum"/>
+				<div class="Titulo">
+					Título da matéria
+				</div>
+			</div>
+			<?php endfor;?>
+			<div class="esp"></div>	
+			
+			<div class="PaginadorHome">
+				<a href="#">&lsaquo;</a> &nbsp;
+					<a href="#">Pag 1/9</a>&nbsp;
+				<a href="#">&rsaquo;</a>
+			</div>
 		</div>
-		
+		<div class="ParceirosHome">
+			<div class="Centro">
+				<h2>Patrocinadores / Parceiros</h2>
+				<?php for($i=1; $i<=16; $i++):?>
+				<img src="imagens/parceiro_logo.png" alt="parceiro" class="LogoParceiroHome left"/>
+				<?php endfor;?>
+				<div class="esp"></div>	
+			</div>			
+		</div>
 		<?php include_once('includes/footer.php');?>
 	</body>
 </html>
