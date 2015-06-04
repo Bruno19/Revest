@@ -32,7 +32,7 @@
 					<a href="#">
 						<div class="FundoSubMenu f4"></div>
 						<div class="TextoMenu">
-							Técnicos<br/>
+							TÃ©cnicos<br/>
 							IN CENA
 						</div>
 					</a>
@@ -47,7 +47,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="eventos.php">
 						<div class="FundoSubMenu f6"></div>
 						<div class="TextoMenu">
 							Eventos<br/>
@@ -59,7 +59,7 @@
 					<a href="#">
 						<div class="FundoSubMenu f7"></div>
 						<div class="TextoMenu">
-							Doação<br/>
+							DoaÃ§Ã£o<br/>
 							IN CENA
 						</div>
 					</a>
@@ -69,7 +69,7 @@
 						<div class="FundoSubMenu f8"></div>
 						<div class="TextoMenu">
 							Baixe Nosso<br/>
-							Mídia Kit
+							MÃ­dia Kit
 						</div>
 					</a>
 				</li>

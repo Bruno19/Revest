@@ -29,13 +29,13 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="quem-somos.php">
 									Quem Somos
 								</a>
 							</li>
 							<li>
 								<a href="#">
-									Holofótes
+									HolofÃ³tes
 								</a>
 							</li>
 							<li>

@@ -1,4 +1,4 @@
-
+/* --------- padrões gerais do site (largura, menu, rodape, etc) --------------------*/
 .Centro{
 	width: 1024px;
 	height: auto;
@@ -212,7 +212,7 @@ nav{
 	background: url(../imagens/icones/down_h.png) no-repeat;
 	background-size: 120% 120%;
 }
-
+/* --------- Página home ---------------*/
 .NoticiaDestaque1{
 	width: 100%;
 	height: auto;
@@ -343,3 +343,54 @@ nav{
 	margin-bottom: 5px;
 	margin-left: 5%;
 }
+
+
+ /*------ quem somos e Orgãos do setor e Eventos -----*/
+ 
+ .Titulos{
+	margin-right: -10px;
+	z-index: 10;
+	margin-top: 30px;	
+	margin-bottom: 40px;
+ }
+ 
+ .TitulosGrandes{
+	width: 883px;
+}
+
+.BlocoConteudo1{
+	width: 800px;
+	height: auto;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 80px;
+	text-align: justify;	
+}
+
+.BlocoQuemSomos, .BlocoEventos{
+	border-bottom: 1px solid #f5d039;
+	margin-bottom: 20px;
+	margin-right: -10px;
+}
+.BlocoQuemSomos h2, .BlocoEventos h2{
+	font-size: 18px;
+	color: #f5d039;
+	font-weight: bold;
+	font-family: "Century Gothic";
+}
+.BlocoQuemSomos p{
+	color: #d9d9d9;
+	font-size: 15px;
+}
+
+.BlocoQuemSomos p a{
+	color: inherit;
+	font-weight: 100;
+	font-size: inherit;
+}
+
+.BlocoEventos p{
+	color: #f5d039;
+	font-size: 15px;
+}
+/* ----  -----*/

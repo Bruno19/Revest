@@ -1,7 +1,7 @@
 
 		<meta charset="utf-8"/>
-		<meta name="author" content="Lucas Veríssimo / Bruno Ap."/>
-		<meta name="designer" content="Lucas Veríssimo / Bruno Ap."/>
+		<meta name="author" content="Lucas VerÃ­ssimo / Bruno Ap."/>
+		<meta name="designer" content="Lucas VerÃ­ssimo / Bruno Ap."/>
 		<meta name="viewport" content="width=450"/>
 		<title>IN Cena</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
