@@ -1,4 +1,4 @@
-/* --------- padrões gerais do site (largura, menu, rodape, etc) --------------------*/
+/* --------- padrï¿½es gerais do site (largura, menu, rodape, etc) --------------------*/
 .Centro{
 	width: 1024px;
 	height: auto;
@@ -212,7 +212,7 @@ nav{
 	background: url(../imagens/icones/down_h.png) no-repeat;
 	background-size: 120% 120%;
 }
-/* --------- Página home ---------------*/
+/* --------- Pï¿½gina home ---------------*/
 .NoticiaDestaque1{
 	width: 100%;
 	height: auto;
@@ -345,7 +345,7 @@ nav{
 }
 
 
- /*------ quem somos e Orgãos do setor e Eventos -----*/
+ /*------ quem somos e Orgï¿½os do setor e Eventos -----*/
  
  .Titulos{
 	margin-right: -10px;
@@ -394,3 +394,296 @@ nav{
 	font-size: 15px;
 }
 /* ----  -----*/
+
+
+/*Pagina contato */
+
+
+.contato_overflow{
+    overflow:hidden;
+    padding:0px;
+    padding-left:20px;
+}
+.FundoConteudo .contato{
+    width:400px;
+    height:350px;
+    background:#464646;
+    float:right;
+    margin-bottom:500px;
+}
+.FundoConteudo .esquerda{
+    margin-right:10px;
+    width:462px;
+}
+.FundoConteudo .esquerda select{
+    width:393px;
+    padding:5px;
+    margin-top:25px;
+    border:none;
+    font-family:"Century Gothic";
+    font-weight:bold;
+    color:#d9d9d9;
+    font-size:16px;
+    background:#898989;
+    background: #898989 url("../imagens/icones/seta_baixo_select.png") no-repeat 90% 50%;
+    background-position:right;
+    border: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.FundoConteudo .esquerda select:hover{
+    background-position:right;
+    background: #dbbd39 url("../imagens/icones/seta_baixo_select.png") no-repeat 90% 50%;
+    color:#595959;
+    background-position:right;
+    border: none;
+    cursor:pointer;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.FundoConteudo .esquerda .input_text{
+    width:382px;
+    padding:5px;
+    margin-top:25px;
+    font-style:italic;
+    border:none;
+    font-family:"Century Gothic";
+    color:#d9d9d9;
+    font-size:16px;
+    background:#898989;
+}.FundoConteudo .esquerda textarea{
+    width:382px;
+    padding:5px;
+    height:100px;
+    margin-top:25px;
+    font-style:italic;
+    border:none;
+    font-family:"Century Gothic";
+    color:#d9d9d9;
+    font-size:16px;
+    background:#898989;
+}
+.FundoConteudo .esquerda label{
+    padding-left:31px;
+    height:100px;
+    margin-top:25px;
+    font-style:italic;
+    color:#d9d9d9;
+    font-size:16px;
+}
+.FundoConteudo .esquerda .btn{
+    width:100px;
+    text-decoration:none;
+    font-family:"Century Gothic";
+    background:url("../imagens/icones/seta_enviar.png")no-repeat;
+    font-weight:bold;
+    color:#d9d9d9;
+    background-position:right;
+    font-size:16px;
+    border:none;
+    margin-left:160px;
+}
+.FundoConteudo .esquerda .btn:hover{
+    background:url("../imagens/icones/seta_enviar_hover.png")no-repeat;
+    color:#f5d039;
+    background-position:right;
+    cursor:pointer;
+}
+
+/* Pagina NEWS LATTER */
+
+.esquerda .barra_amarela{
+    margin-top:40px;
+    background:#f5d039;
+    width: 392px;
+    padding:2px;
+}
+.esquerda .barra_amarela h2{
+    font-family:"Century Gothic";
+    font-size:17px;
+    margin-right:140px;
+    color:#595959;
+    font-weight:bold;
+}
+.esquerda .bt_news{
+    width:100px;
+    text-decoration:none;
+    font-family:"Century Gothic";
+    background:url("../imagens/icones/seta_enviar.png")no-repeat;
+    font-weight:bold;
+    color:#d9d9d9;
+    background-position:right;
+    font-size:16px;
+    border:none;
+    margin-left:325px;
+    margin-top:90px;
+} 
+.FundoConteudo .esquerda .bt_news:hover{
+    background:url("../imagens/icones/seta_enviar_hover.png")no-repeat;
+    color:#f5d039;
+    background-position:right;
+    cursor:pointer;
+}
+
+.FundoConteudo .contato h1{
+    font-family:"Century Gothic";
+    font-size:18px;
+    text-align:left;
+    margin-right:140px;
+    color:#d9d9d9;
+    margin-top:40px;
+    font-style:italic;
+    margin-left:70px;
+    font-weight:inherit;
+    width:300px;
+}
+.FundoConteudo .contato .texto{
+    font-family:"Century Gothic";
+    font-size:14px;
+    text-align:left;
+    margin-right:140px;
+    color:#d9d9d9;
+    margin-top:40px;
+    margin-left:70px;
+    font-weight:inherit;
+    width:300px;
+}
+
+
+/*Pagina em foco*/
+
+.FundoConteudo .ofertas{
+    width:910px;
+    height:1500px;
+    float:right;
+}
+.FundoConteudo .ofertas .bloc_ofertas{
+    width:882px;
+    height:auto;
+    float:right;
+    margin-top:70px;
+}
+.FundoConteudo .ofertas .bloc_ofertas .text_ofertas{
+    width:552px;
+    font-family:"Century Gothic";
+    height:auto;;
+    float:right;
+    line-height:23px;
+    color:#f5d039;
+    margin-right:20px;
+}
+.FundoConteudo .ofertas .bloc_ofertas .text_ofertas p{
+    color:#f5d039;
+    line-height:26px;
+    letter-spacing:1.2px;
+}
+.search{
+    margin-right: -148px;
+    margin-top: 80px;
+    z-index: 10;
+    float: right;
+}
+
+/*Pagina DoaÃ§Ã£o*/
+.FundoConteudo .doacao{
+    width:873px;
+    height:auto;
+    float:right;
+}
+.FundoConteudo .doacao .centraliza_doacao{
+    width:790px;
+    height:auto;
+    float:left;
+}
+.FundoConteudo .doacao .centraliza_doacao .barra_pesquisa{
+    width:770px;
+    height:35px;
+    float:left;
+    background:#f5d039;
+   
+}
+.FundoConteudo .doacao .centraliza_doacao .barra_pesquisa a{
+    color:#595959;
+    font-weight:bold;
+    float:left;
+    margin-left:35px;
+    margin-top:8px;
+    text-decoration:none;
+}
+.FundoConteudo .doacao .centraliza_doacao .barra_pesquisa img{
+    vertical-align:middle;
+}
+.FundoConteudo .doacao .centraliza_doacao .barra_pesquisa .bloco_pesquisa{
+    background:#bebebe;
+    float:right;
+    padding:7px;
+    margin-right:-20px;
+    width:122px;
+}
+.FundoConteudo .doacao .centraliza_doacao .barra_pesquisa .bloco_pesquisa label{
+    color:#595959;
+    margin-left:30px;
+   
+}
+.FundoConteudo .doacao .centraliza_doacao .galeria_doacao{
+   position:relative;
+    float: left;
+    height: 405px;
+    width: 790px;
+    margin-top:10px;
+    background:#f5d039;
+   
+}
+
+.FundoConteudo .doacao .centraliza_doacao .imgs_doacao{
+    float:left;
+    background:#404040;
+    margin-bottom:1px;
+    width:394px;
+    height:202px;
+}
+.FundoConteudo .doacao .centraliza_doacao .imgs_doacao:hover{
+    background:#404040 url("../imagens/icones/lupa.png")no-repeat;
+    cursor:pointer;
+}
+
+.FundoConteudo .doacao .centraliza_doacao .texto_doacao{
+    float:left;
+    width: 790px;
+    height:auto;
+    padding-bottom:20px;
+}
+.FundoConteudo .doacao .centraliza_doacao .texto_doacao .titulo{
+    width: 790px;
+    height:42px;
+}
+.FundoConteudo .doacao .centraliza_doacao .texto_doacao .titulo h1{
+    color: #f5d039;
+    float: left;
+    font-weight: bold;
+    font-size:16px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.FundoConteudo .doacao .centraliza_doacao .texto_doacao .titulo a{
+    color: #d9d9d9;
+    float: right;
+    font-weight: bold;
+    font-size:14px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.FundoConteudo .doacao .centraliza_doacao .texto_doacao p{
+    color: #d9d9d9;
+
+}
+
+
+
+
+
