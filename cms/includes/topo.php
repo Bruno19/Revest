@@ -66,10 +66,10 @@
 						<a href="#">Orgãos do Setor</a>
 						<ul class="DropDown">
 							<li>
-								<a href="#">Cadastrar Orgãos</a>
+								<a href="orgaos-do-setor.php?action=create">Cadastrar Orgãos</a>
 							</li>
 							<li>
-								<a href="#">Orgãos Cadastrados</a>
+								<a href="orgaos-do-setor.php?action=list">Orgãos Cadastrados</a>
 							</li>
 						</ul>
 					</li>
@@ -77,10 +77,10 @@
 						<a href="#">Ofertas</a>
 						<ul class="DropDown">
 							<li>
-								<a href="#">Cadastrar</a>
+								<a href="person.php?action=create&type=1">Cadastrar</a>
 							</li>
 							<li>
-								<a href="#">Lista de Cadastrados</a>
+								<a href="person.php?action=list&type=1">Lista de Cadastrados</a>
 							</li>
 						</ul>
 					</li>
@@ -88,10 +88,10 @@
 						<a href="#">Personalidades</a>
 						<ul class="DropDown">
 							<li>
-								<a href="#">Cadastrar</a>
+								<a href="person.php?action=create&type=2">Cadastrar</a>
 							</li>
 							<li>
-								<a href="#">Lista de Cadastrados</a>
+								<a href="person.php?action=list&type=2">Lista de Cadastrados</a>
 							</li>
 						</ul>
 					</li>
@@ -99,10 +99,21 @@
 						<a href="#">Projetos</a>
 						<ul class="DropDown">
 							<li>
-								<a href="#">Criar Novo Projeto</a>
+								<a href="project.php?action=create&type=project">Ver Mais</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Outros</a>
+						<ul class="DropDown">
+							<li>
+								<a href="others.php?area=partner">Logo de Parceiros</a>
 							</li>
 							<li>
-								<a href="#">Lista de Projetos</a>
+								<a href="others.php?area=sliders">Mini Slider</a>
+							</li>
+							<li>
+								<a href="others.php?area=marketing">Publicidade</a>
 							</li>
 						</ul>
 					</li>

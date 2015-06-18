@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿<?php include_once('cms/php/conn.php');?>
+<!DOCTYPE html>
 <html lang="pt-br">
 	<head>
 		<?php include_once('includes/head.php');?>
@@ -198,9 +199,14 @@
 		<div class="ParceirosHome">
 			<div class="Centro">
 				<h2>Patrocinadores / Parceiros</h2>
-				<?php for($i=1; $i<=16; $i++):?>
-				<img src="imagens/parceiro_logo.png" alt="parceiro" class="LogoParceiroHome left"/>
-				<?php endfor;?>
+				<?php 
+					$SelectPartners = mysqli_query($conn, "SELECT * FROM partners");
+					while($partner=mysqli_fetch_object($SelectPartners)):
+				?>
+					<a href="<?php echo $partner->url_pa;?>" target="_blank">
+						<img src="cms/imagens/parceiros/<?php echo $partner->image_pa;?>" alt="parceiro" class="LogoParceiroHome left"/>
+					</a>
+				<?php endwhile;?>
 				<div class="esp"></div>	
 			</div>			
 		</div>

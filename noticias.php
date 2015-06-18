@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿<?php include_once('cms/php/conn.php');?>
+<!DOCTYPE html>
 <html lang="pt-br">
 	<head>
 		<?php include_once('includes/head.php');?>		
