@@ -685,5 +685,64 @@ nav{
 
 
 
+/*PAGINAS PROJETOS*/
 
+.FundoConteudo .centraliza_barra{
+    width:874px;
+    height:auto;
+    float:right;
+
+}
+.FundoConteudo .centraliza_barra .next_back{
+    width:774px;
+    height:40px;
+    float:left;
+    background:#F5D039;
+}
+.FundoConteudo .centraliza_barra .next_back h1{
+    color: #595959;
+    float: left;
+    font-weight: bold;
+    font-size:21px;
+    padding-left:50px;
+    text-decoration: none;
+    margin-top:5px;
+}
+.FundoConteudo .centraliza_barra .next_back .setas{
+    background: #333333;
+    float: right;
+    width:70px;
+    height:40px;
+}
+
+.FundoConteudo .centraliza_barra .galeria{
+    float: left;
+     width:774px;
+    margin-top:20px;
+    height:auto;
+}
+
+
+.FundoConteudo .centraliza_barra .outros{
+    float: left;
+     width:100%;
+    margin-top:20px;
+    height:300px;
+    border-top:2px solid #f5d039;
+}
+.FundoConteudo .centraliza_barra .outros h2{
+    color: #f5d039;
+    font-weight:inherit;
+    font-size:21px;
+    text-decoration: none;
+    margin-top:5px;
+       margin-bottom:20px;
+}
+.FundoConteudo .centraliza_barra .outros ul li{
+    list-style:none;
+    color:#d9d9d9;
+    line-height:29px;
+ 
+    text-decoration:underline;
+}
 
