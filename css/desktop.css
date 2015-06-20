@@ -742,7 +742,60 @@ nav{
     list-style:none;
     color:#d9d9d9;
     line-height:29px;
- 
     text-decoration:underline;
 }
 
+/*PAGINA DO MAPA*/
+
+
+.FundoConteudo .info_direita{
+    width:573px;
+    height:870px;
+    float:right;
+}
+.FundoConteudo .info_direita select{
+    width:100%;
+    padding:5px;
+    margin-top:10px;
+    border:none;
+    font-family:"Century Gothic";
+    font-weight:inherit;
+    color:#626262;
+    font-size:16px;
+    background:#d1d1d1;
+    background: #d1d1d1 url("../imagens/icones/seta_baixo_select.png") no-repeat 90% 50%;
+    background-position:right;
+    border: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.FundoConteudo .info_direita button{
+    width:150px;
+    padding:5px;
+    margin-top:20px;
+    border:none;
+    font-family:"Century Gothic";
+    font-weight:inherit;
+    color:#626262;
+    font-size:16px;
+    opacity:0.6;
+    cursor:pointer;
+    background: #f5d039;
+    background-position:right;
+    border: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.FundoConteudo .info_direita .resultados{
+    width:573px;
+    height:120px;
+    margin-top:20px;
+    float:right;
+    border-bottom:1px solid #f5d039;
+    color:#f5d039;
+    line-height:23px;
+}
