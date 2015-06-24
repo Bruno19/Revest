@@ -2,7 +2,7 @@
 		<div class="Centro SubMenu">
 			<ul class="ListaSubMenu">
 				<li>
-					<a href="#">
+					<a href="profissionais.php">
 						<div class="FundoSubMenu f1"></div>
 						<div class="TextoMenu">
 							Profissionais<br/>
@@ -11,7 +11,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="fabricantes.php">
 						<div class="FundoSubMenu f2"></div>
 						<div class="TextoMenu">
 							Fabricantes<br/>
@@ -20,7 +20,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="lojas.php">
 						<div class="FundoSubMenu f3"></div>
 						<div class="TextoMenu">
 							Lojas<br/>
@@ -29,7 +29,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="tecnicos.php">
 						<div class="FundoSubMenu f4"></div>
 						<div class="TextoMenu">
 							Técnicos<br/>
@@ -38,12 +38,12 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="ofertas.php">
 						<div class="FundoSubMenu f5"></div>
 						<div class="TextoMenu">
 							Ofertas<br/>
 							IN CENA
-						</div>
+						</div> 
 					</a>
 				</li>
 				<li>

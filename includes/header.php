@@ -23,13 +23,13 @@
 					<nav>
 						<ul class="MenuSuperior">
 							<li>
-								<a href="index.php">
+								<a href="index.php" style="margin-right:48px;">
 									<img src="imagens/icones/claquete.png" alt="claquete" class="IconeMenuSuperior"/>
 									Home
 								</a>
 							</li>
 							<li>
-								<a href="quem-somos.php">
+								<a href="quem-somos.php" style="margin-right:8px;">
 									Quem Somos
 								</a>
 							</li>
