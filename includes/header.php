@@ -37,6 +37,12 @@
 								<a href="#">
 									Holofótes
 								</a>
+                                    <ul>
+                                      <li><a href="personalidades.php">Personalidades IN CENA</a></li>
+                                      <li><a href="materias.php">Matérias e artigos</a></li>
+                                      <li><a href="orgaos-do-setor.php">Órgãos do setor</a></li>                    
+                                      <li><a href="noticias.php">Noticias</a></li>                    
+                                    </ul>
 							</li>
 							<li>
 								<a href="#">
