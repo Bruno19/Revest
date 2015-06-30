@@ -31,7 +31,19 @@
 		<div class="Linha">				
 			<input type="text" name="title" class="Campo input" placeholder="Título: " style="width: 37.3%" value="<?php echo $News->Title;?>"/>						
 		</div>
-		
+		<?php if($_GET['type']==1):?>
+		<div class="Linha">				
+			Destaque:
+			<input type="radio" name="featured" value="0" <?php if($News->Featured==0){echo'checked';}?>/>Não | 
+			<input type="radio" name="featured" value="1" <?php if($News->Featured==1){echo'checked';}?>/>Destaque 1 | 
+			<input type="radio" name="featured" value="2" <?php if($News->Featured==2){echo'checked';}?>/>Destaque 2 
+		</div>
+		<?php 
+			endif;
+			if($_GET['type']==2):
+		?>
+			<input type="hidden" name="featured" value="0"/>
+		<?php endif;?>
 		<div class="Linha">				
 			<textarea name="content" class="tiny" style="width: 37.3%; height: 350px; resize: none"><?php echo str_replace('&#39;', "'", str_replace('&#34;', '"', $News->Content));?></textarea>
 		</div>		

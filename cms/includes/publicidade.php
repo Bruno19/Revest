@@ -71,7 +71,11 @@
 				$Extencao =  substr($Img['name'], -4);
 				
 				$tempo = time().$Extencao;
-				$NomeUnico = md5(time()).$Extencao;
+				if($_POST['image']==''){
+					$NomeUnico = md5(time()).$Extencao;
+				}else{
+					$NomeUnico = $_POST['image'];
+				}
 				move_uploaded_file($Img['tmp_name'], 'imagens/upar'.$tempo);			
 				
 				$resizeObj = new resize('imagens/upar'.$tempo);	

@@ -14,6 +14,7 @@
 			var data = {
 				id: c.id.value,
 				action: c.action.value,
+				featured: c.featured.value,
 				type: c.type.value,
 				title: c.title.value,
 				content: tinyMCE.get('content').getContent()

@@ -1,6 +1,6 @@
 <?php
 	include_once('conn.php');
-	
+	mysqli_set_charset($conn, 'utf8');
 	if(isset($_POST['action'])){
 		if($_POST['action']=='alter-image'){
 			include_once('php/class/resize.class.php');

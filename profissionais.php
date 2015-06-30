@@ -1,4 +1,4 @@
-﻿<?php include_once('cms/php/conn.php');?>
+﻿<?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -12,50 +12,28 @@
 			<img src="imagens/profissionais.jpg" alt="Contato" class="Titulos right" style="margin-bottom: 10px;" />
             
              <div class="centraliza_barra">
+				<div class="MapaMaroto">
+					<form name="formarea" method="post">
+						<input type="hidden" name="area" value="1"/>
+					</form>
+					<?php include_once('includes/mapa.php');?>
+				</div>
                     <div class="info_direita">
-                        <select>
-                            <option>Selecione uma cidade</option>    
-                            <option>Duvidas</option>    
-                            <option>Sugestão</option>    
-                            <option>Criticas</option>    
-                        </select>
-                        
-                        <button>Pesquisar</button>
-                        
-                        <div class="resultados">
-                            <b>João de Oliveira soares</b> <br/> 
-                              Porcelanato <br/> 
-                                joaosoares@lorenipsun.com.br <br/> 
-                                www.joaosoares.com.br
-                        </div>                      
-                                            
-                        
-                        <div class="resultados">
-                            <b>Francisco de Oliveira Soares</b> <br/> 
-                            Piso em madeira <br/> 
-                            franciscosoares@lorenipsun.com.br <br/> 
-                            www.franciscosoares.com.br
-                        </div>
-                        
-                        <div class="resultados">
-                            <b>Manoel de Oliveira Soares</b> <br/> 
-
-Vinílico <br/> 
-manoelsoares@lorenipsun.com.br <br/> 
-www.manoelsoares.com.br <br/> 
-                        </div>   
-                        
+						<form name="selectcidades" method="post" onsubmit="return false">
+							<select name="cidade" onchange="CarregarResultados(this.value)" id="SelectCidades">
+								<option value="null">Selecione uma cidade</option>   
+							</select>
+							
+							<button onclick="CarregarResultados(document.selectcidades.cidade.value)">Pesquisar</button>
+                        </form>
+						<div class="ResultBusca">
+							&nbsp;                     
+                        </div>                         
                     </div>
-                 
-    
-                 
-            </div>
-   
-            
-        </div>
-        
-        
-        
+				<div class="esp"></div>					
+            </div>   
+			<div class="esp"></div>
+        </div>       
 		<?php include_once('includes/footer.php');?>
 	</body>
 </html>

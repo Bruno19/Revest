@@ -113,7 +113,7 @@
     <!-- Jssor Slider Begin -->
     <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
     <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 774px;
-        height: 456px;  overflow: hidden;">
+        height: 500px;  overflow: hidden;">
 
         <!-- Loading Screen -->
         <div u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -126,56 +126,25 @@
         </div>
 
         <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 900px; height: 356px; overflow: hidden;">
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 900px; height: 400px; overflow: hidden;">
+			<?php
+				$SelectImages = mysqli_query($conn, "SELECT * FROM images_pr WHERE id_pr=$Project->id_pr");
+				if(mysqli_num_rows($SelectImages)>0):
+				while($Images=mysqli_fetch_object($SelectImages)):
+			?>
             <div>
-                <img u="image" src="galeria/img/alila/01.jpg" />
-                <img u="thumb" src="galeria/img/alila/thumb-01.jpg" />
+				<div u="image" class="BlocoSlider">
+					<img src="cms/imagens/projetos/<?php echo $Images->name_im;?>" />
+					<div class="Texto">
+						<?php echo $Images->text_im;?>
+					</div>
+				</div>
+                <img u="thumb" src="cms/imagens/projetos/<?php echo $Images->name_im;?>" />
             </div>
-            <div>
-                <img u="image" src="galeria/img/alila/02.jpg" />
-                <img u="thumb" src="galeria/img/alila/thumb-02.jpg" />
-            </div>
-            <div>
-                <img u="image" src="galeria/img/alila/03.jpg" />
-                <img u="thumb" src="galeria/img/alila/thumb-03.jpg" />
-            </div>
-            <div>
-                <img u="image" src="galeria/img/alila/04.jpg" />
-                <img u="thumb" src="galeria/img/alila/thumb-04.jpg" />
-            </div>
-            <div>
-                <img u="image" src="galeria/img/alila/05.jpg" />
-                <img u="thumb" src="galeria/img/alila/thumb-05.jpg" />
-            </div>
-            <div>
-                <img u="image" src="galeria/img/alila/06.jpg" />
-                <img u="thumb" src="galeria/img/alila/thumb-06.jpg" />
-            </div>
-            <div>
-                <img u="image" src="galeria/img/alila/07.jpg" />
-                <img u="thumb" src="galeria/img/alila/thumb-07.jpg" />
-            </div>
-            <div>
-                <img u="image" src="galeria/img/alila/08.jpg" />
-                <img u="thumb" src="galeria/img/alila/thumb-08.jpg" />
-            </div>
-            <div>
-                <img u="image" src="galeria/img/alila/09.jpg" />
-                <img u="thumb" src="galeria/img/alila/thumb-09.jpg" />
-            </div>
-            <div>
-                <img u="image" src="galeria/img/alila/10.jpg" />
-                <img u="thumb" src="galeria/img/alila/thumb-10.jpg" />
-            </div>
-            
-            <div>
-                <img u="image" src="galeria/img/alila/11.jpg" />
-                <img u="thumb" src="galeria/img/alila/thumb-11.jpg" />
-            </div>
-            <div>
-                <img u="image" src="galeria/img/alila/12.jpg" />
-                <img u="thumb" src="galeria/img/alila/thumb-12.jpg" />
-            </div>
+			<?php
+				endwhile;
+				endif;
+			?>
         </div>
         
         <!--#region Arrow Navigator Skin Begin -->

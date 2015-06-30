@@ -37,12 +37,23 @@
 								<a href="#">
 									Holofótes
 								</a>
-                                    <ul>
-                                      <li><a href="personalidades.php">Personalidades IN CENA</a></li>
-                                      <li><a href="materias.php">Matérias e artigos</a></li>
-                                      <li><a href="orgaos-do-setor.php">Órgãos do setor</a></li>                    
-                                      <li><a href="noticias.php">Noticias</a></li>                    
-                                    </ul>
+								<ul class="Dropdown">
+									<li onclick="location.href='personalidades.php'">
+										<a href="personalidades.php">Personalidades IN CENA</a>
+									</li>
+									<li onclick="location.href=''">
+										<a href="#">Matérias e Artigos</a>
+									</li>
+									<li onclick="location.href='orgaos-do-setor.php'">
+										<a href="orgaos-do-setor.php">Orgãos do Setor</a>
+									</li>
+									<li onclick="location.href='noticias.php'">
+										<a href="noticias.php">Notícias</a>
+									</li>
+									<li onclick="location.href='projetos.php'">
+										<a href="projetos.php">Projetos</a>
+									</li>
+								</ul>
 							</li>
 							<li>
 								<a href="#">
@@ -61,11 +72,18 @@
 			</div>
 			<div class="FundoInferior">			
 				<div class="Centro DestaqueTopo">
-					<?php for($i=1; $i<=3; $i++):?>
-						<a href="#">
-							<img src="imagens/dest<?php echo $i;?>.jpg" alt="destaque" class="ImagemDestaqueTopo"/>
+					<?php 
+						$SelectPublict = mysqli_query($conn, "SELECT * FROM publicidade LIMIT 0, 3");
+						while($Publict=mysqli_fetch_object($SelectPublict)):
+						if($Publict->image_p!=''):
+					?>
+						<a href="<?php echo $Publict->url_p?>" target="_blank">
+							<img src="cms/imagens/publicidade/<?php echo $Publict->image_p?>" alt="destaque" class="ImagemDestaqueTopo"/>
 						</a>
-					<?php endfor;?>
+					<?php 
+						endif;
+						endwhile;
+					?>
 					<div class="esp"></div>
 				</div>			
 			</div>

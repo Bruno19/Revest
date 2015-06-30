@@ -1,5 +1,6 @@
 <?php
 	include_once('conn.php');
+	mysqli_set_charset($conn, 'utf8');
 	include_once('class/project.class.php');
 	include_once('class/resize.class.php');
 	include_once('escapeSQL.php');
@@ -48,7 +49,7 @@
 				move_uploaded_file($Imgs['tmp_name'][$i], 'imagens/project'.$tempo);			
 				
 				$resizeObj = new resize('imagens/project'.$tempo);	
-				$resizeObj -> resizeImage(800, 600, 'crop');		
+				$resizeObj -> resizeImage(900, 450, 'crop');		
 				$resizeObj -> saveImage('imagens/projetos/'.$NomeUnico, 95);				
 				
 				$Return = $Project->InsertImages($conn, $post['project'], $NomeUnico, $post['text']);

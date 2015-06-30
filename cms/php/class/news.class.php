@@ -10,6 +10,7 @@
 		var $Image4;
 		var $Date;
 		var $Type;
+		var $Featured;
 		
 		function SelectUniqueNews($Conn, $Id, $Type){
 			$Select = mysqli_query($Conn, "SELECT * FROM news WHERE id_no=$Id AND type_no=$Type");
@@ -26,6 +27,7 @@
 				$this->Image4=$Data->image4_no;
 				$this->Date=$Data->date_no;
 				$this->Type=$Data->type_no;
+				$this->Featured=$Data->featured_no;
 				
 				return true;
 				
@@ -122,10 +124,14 @@
 		}
 		
 		function UpdateNews($Conn, $Id, $Data){
+			if($Data['featured']!=0){
+				$Up = mysqli_query($Conn, "UPDATE news SET featured_no=0 WHERE featured_no=$Data[featured]");
+			}
 			$Update = mysqli_query($Conn, "
 				UPDATE news SET 
 					title_no='$Data[title]', 
-					content_no='$Data[content]'  
+					content_no='$Data[content]',
+					featured_no=$Data[featured]
 				WHERE id_no=$Data[id]
 			");
 			

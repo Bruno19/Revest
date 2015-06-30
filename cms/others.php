@@ -1,5 +1,6 @@
 <?php
 	include_once('php/conn.php');
+	mysqli_set_charset($conn, "utf8");
 	include_once('php/restrict.php');
 ?>
 

@@ -1,5 +1,6 @@
 <?php
 	include_once('php/conn.php');
+	mysqli_set_charset($conn, "utf8");
 	include_once('php/restrict.php');
 ?>
 
@@ -12,6 +13,7 @@
 		<?php include_once('includes/topo.php');?>
 		
 		<?php
+			mysqli_set_charset($conn, 'utf8');
 			if(isset($_GET['m'])){
 				if($_GET['m']==1){					
 					include_once('includes/cadastrar-usuario.php');

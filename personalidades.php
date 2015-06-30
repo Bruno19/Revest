@@ -1,4 +1,4 @@
-﻿<?php include_once('cms/php/conn.php');?>
+﻿<?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -13,80 +13,26 @@
                    <img src="imagens/search.png" class="search">
          
             <div class="ofertas">
-                
+                <?php 
+					$SelectPerson = mysqli_query($conn, "SELECT * FROM product WHERE type_pro=2 ORDER BY id_pro, featured_pro DESC");
+					while($Person=mysqli_fetch_object($SelectPerson)):
+				?>
                 <div class="bloc_ofertas">
-                    <img src="imagens/personalidades.jpg">
-             
-                    
+                    <img src="cms/imagens/produto/<?php echo $Person->image_pro;?>">                 
                         <div class="text_ofertas">
-                                <b>Joaquim Barbosa </b><br />
-                                Arquiteto<br />
-                                Contato: 11 5555.5555<br />
-                                www.lojax.com.br<br /><br />
+                                <b><?php echo $Person->title_pro;?> </b><br />
+                                <?php echo $Person->subtitle_pro;?><br />
+                                Contato: <?php echo $Person->contact_pro;?><br />
+                                <?php echo $Person->link_pro;?><br /><br />
                             
                                  <b>About:</b><br />
                                                             
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing <br />
-                                elit, sed diam nonummy nibh euismod tincidunt ut <br />
-                                laoreet dolore magna aliquam erat volutpat. Ut wisi <br />
-                                enim ad minim veniam, quis nostrud exerci tation <br />
-                                ullamcorper suscipit lobortis nisl ut aliquip ex ea <br />
-                                commodo consequat. Duis autem vel eum iriure doloro <br />
+                                <p>
+									<?php echo $Person->about_pro;?>
                                 <p/>
-
-
-
-
-
                         </div>
                 </div>
-                                
-                <div class="bloc_ofertas">
-                    <img src="imagens/personalidades.jpg">
-                    
-                        <div class="text_ofertas">
-                                <b>Joaquim Barbosa </b><br />
-                                Arquiteto<br />
-                                Contato: 11 5555.5555<br />
-                                www.lojax.com.br<br /><br />
-                            
-                                 <b>About:</b><br />
-                                                            
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing <br />
-                                elit, sed diam nonummy nibh euismod tincidunt ut <br />
-                                laoreet dolore magna aliquam erat volutpat. Ut wisi <br />
-                                enim ad minim veniam, quis nostrud exerci tation <br />
-                                ullamcorper suscipit lobortis nisl ut aliquip ex ea <br />
-                                commodo consequat. Duis autem vel eum iriure doloro <br />
-                                <p/>
-
-
-                        </div>
-                </div>
-                                
-                <div class="bloc_ofertas">
-                    <img src="imagens/personalidades.jpg">
-                    
-                        <div class="text_ofertas">
-                                <b>Joaquim Barbosa </b><br />
-                                Arquiteto<br />
-                                Contato: 11 5555.5555<br />
-                                www.lojax.com.br<br /><br />
-                            
-                                 <b>About:</b><br />
-                                                            
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing <br />
-                                elit, sed diam nonummy nibh euismod tincidunt ut <br />
-                                laoreet dolore magna aliquam erat volutpat. Ut wisi <br />
-                                enim ad minim veniam, quis nostrud exerci tation <br />
-                                ullamcorper suscipit lobortis nisl ut aliquip ex ea <br />
-                                commodo consequat. Duis autem vel eum iriure doloro <br />
-                                <p/>
-
-
-                        </div>
-                </div>
-                
+                <?php endwhile;?>
             </div>
 
             

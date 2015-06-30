@@ -20,4 +20,9 @@
 		$Limpando2=str_replace("'", '&#39;', $Limpando1);
 		return $Limpando2;
 	}
+	function LimparGeralString($string){
+		$Limpando1=str_replace('"', '', $string);
+		$Limpando2=str_replace("'", '', $Limpando1);
+		return $Limpando2;
+	}
 ?>

@@ -1,4 +1,4 @@
-﻿<?php include_once('cms/php/conn.php');?>
+﻿<?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -13,15 +13,20 @@
 		 
 			<img src="imagens/tit-noticias.jpg" alt="Notícias" class="Titulos TitulosGrandes right"/>
 			
-			<?php for($i=1; $i<=3; $i++):?>
+			<?php
+				$SelectClipping = mysqli_query($conn, "SELECT * FROM clipping WHERE type_c=1 ORDER BY id_c DESC");
+				while($Clipping=mysqli_fetch_object($SelectClipping)):
+			?>
+			<a href="<?php echo $Clipping->url_c;?>" target="_blank" style="text-decoration: none">
 			<div class="BlocoConteudo1 BlocoEventos right">
-				<h2>Titulo da notícia</h2>
+				<h2><?php echo $Clipping->title_c;?></h2>
 				<br/>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut molestie purus. Aenean finibus iaculis suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam iaculis dapibus arcu, eu condimentum diam placerat non.
+					<?php echo $Clipping->content_c;?>
 				</p>
 			</div>
-			<?php endfor;?>
+			</a>
+			<?php endwhile;?>
 			
 			<div class="esp"></div>
 		</div>

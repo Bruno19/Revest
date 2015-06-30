@@ -115,12 +115,47 @@
 							<li>
 								<a href="others.php?area=marketing">Publicidade</a>
 							</li>
+							<li>
+								<a href="#">Profissionais</a>
+								<ul class="DropDown2">
+									<li><a href="mapping.php?action=list&area=1">Lista de Cadastrados</a></li>
+									<li><a href="mapping.php?action=create&area=1">Cadastrar Novo</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Fabricantes</a>
+								<ul class="DropDown2">
+									<li><a href="mapping.php?action=list&area=2">Lista de Cadastrados</a></li>
+									<li><a href="mapping.php?action=create&area=2">Cadastrar Novo</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Lojas</a>
+								<ul class="DropDown2">
+									<li><a href="mapping.php?action=list&area=3">Lista de Cadastrados</a></li>
+									<li><a href="mapping.php?action=create&area=3">Cadastrar Novo</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Técnicos</a>
+								<ul class="DropDown2">
+									<li><a href="mapping.php?action=list&area=4">Lista de Cadastrados</a></li>
+									<li><a href="mapping.php?action=create&area=4">Cadastrar Novo</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Usuários</a>
+								<ul class="DropDown2">
+									<li><a href="config.php?action=list&m=2">Lista de Cadastrados</a></li>
+									<li><a href="config.php?action=create&m=1">Cadastrar Novo</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="midiakit.php">Midia Kit</a>
+							</li>
 						</ul>
 					</li>
 				</ul>
 				<div class="esp"></div>
 			</section>
 		</nav>
-		
-		<!--
-							-->

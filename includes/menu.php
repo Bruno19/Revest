@@ -68,8 +68,19 @@
 					<a href="#">
 						<div class="FundoSubMenu f8"></div>
 						<div class="TextoMenu">
-							Baixe Nosso<br/>
-							Mídia Kit
+						<?php
+							$SelectMidiakit = mysqli_query($conn, "SELECT * FROM midiakit");
+							$Midia = mysqli_fetch_object($SelectMidiakit);
+							if($Midia->existe==0){
+								echo '
+									<a href="javascript:alert('."'".'Nenhum conteúdo para download!'."'".')" style="color: inherit; text-decoration: none">Baixe Nosso<br/>Mídia Kit</a>
+								';
+							}else{
+								echo '
+									<a href="cms/midiakit/'.$Midia->nome.'" download="'.$Midia->nome.'" style="color: inherit; text-decoration: none">Baixe Nosso<br/>Mídia Kit</a>
+								';
+							}
+						?>							
 						</div>
 					</a>
 				</li>

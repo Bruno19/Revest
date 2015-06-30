@@ -1,5 +1,6 @@
 <?php 
 	require_once('conn.php');
+	mysqli_set_charset($conn, 'utf8');
 	include_once('class/usuario.class.php');
 	include_once('escapeSQL.php');
 	
@@ -12,11 +13,11 @@
 	if(isset($post['login'])=='ok'){
 		$Usuario->Login($conn, $DadosLimpos['dados']);
 	}
-	/*
+	
 	if(isset($post['cadastrar'])=='ok'){
 		$Usuario->CadastrarUsuario($conn, $DadosLimpos['dados']);
 	}
-	*/
+	
 	if(isset($post['editar'])=='ok'){
 		$Usuario->EditarUsuario($conn, $DadosLimpos['dados']);
 	}

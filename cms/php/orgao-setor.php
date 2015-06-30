@@ -1,5 +1,6 @@
 <?php
 	include_once('conn.php');
+	mysqli_set_charset($conn, 'utf8');
 	include_once('class/orgao-setor.class.php');
 	include_once('escapeSQL.php');
 	$Orgao = new OrgaoSetor;
