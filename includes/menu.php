@@ -10,7 +10,7 @@
 						</div>
 					</a>
 				</li>
-				<li>
+				<li style="margin-left:15px;">
 					<a href="fabricantes.php">
 						<div class="FundoSubMenu f2"></div>
 						<div class="TextoMenu">
@@ -19,7 +19,7 @@
 						</div>
 					</a>
 				</li>
-				<li>
+				<li style="margin-left:15px;">
 					<a href="lojas.php">
 						<div class="FundoSubMenu f3"></div>
 						<div class="TextoMenu">
@@ -37,7 +37,7 @@
 						</div>
 					</a>
 				</li>
-				<li>
+				<li style="margin-left:10px;">
 					<a href="ofertas.php">
 						<div class="FundoSubMenu f5"></div>
 						<div class="TextoMenu">
@@ -55,7 +55,7 @@
 						</div>
 					</a>
 				</li>
-				<li>
+				<li >
 					<a href="doacao.php">
 						<div class="FundoSubMenu f7"></div>
 						<div class="TextoMenu">

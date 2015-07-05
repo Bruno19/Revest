@@ -29,6 +29,12 @@
 			<?php endwhile;?>
 			
 			<div class="esp"></div>
+          <div class="PaginadorHome">
+                <a href="#">‹</a>
+                <a href="#">Pag 1/9</a>
+                <a href="#">›</a>
+            </div>
+            
 		</div>
 		<?php include_once('includes/footer.php');?>
 	</body>

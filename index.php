@@ -66,7 +66,7 @@
 		
 		<div class="Centro FundoConteudo">
 			<?php
-				$SelectDestaque1 = mysqli_query($conn, "SELECT * FROM news WHERE featured_no=1 AND type_no=1");
+				$SelectDestaque1 = mysqli_query($conn, "SELECT * FROM news WHERE featured_no=1 AND type_no=1")or die(mysqli_error($conn));
 				$Destaque1=mysqli_fetch_object($SelectDestaque1);
 			?>
 			<a href="materias.php?id=<?php echo $Destaque1->id_no;?>" style="text-decoration: none">
