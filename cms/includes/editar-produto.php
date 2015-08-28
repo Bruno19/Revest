@@ -9,7 +9,7 @@
 		<div class="Linha">				
 			<input type="text" name="title" class="Campo input" placeholder="Título: " style="width: 37.3%" value="<?php echo $Product->Title;?>"/>						
 		</div>
-		<div class="Linha"  <?php echo $Hide;?>>				
+		<div class="Linha">				
 			Destaque: 
 			<input type="radio" name="featured" value="1" <?php if($Product->Featured==1){echo'checked';}?>/>Sim | 
 			<input type="radio" name="featured" value="0" <?php if($Product->Featured==0){echo'checked';}?>/>Não 						

@@ -1,4 +1,3 @@
-
 	function EditarNews(){		
 		
 		var c = document.editnews;
@@ -14,7 +13,7 @@
 			var data = {
 				id: c.id.value,
 				action: c.action.value,
-				featured: c.featured.value,
+				featured: $("input[name='featured']:checked").val(),
 				type: c.type.value,
 				title: c.title.value,
 				content: tinyMCE.get('content').getContent()

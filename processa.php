@@ -31,7 +31,7 @@ $html = '
 require_once("mailer/class.phpmailer.php");
 
 define('USER', 'brunoaparecido1994@bol.com.br');
-define('PWD', 'bruno7');
+define('PWD', 'xxx');
 
 function smtpmailer($para, $de, $de_nome, $assunto, $corpo) { 
 	global $error;

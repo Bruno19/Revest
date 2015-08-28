@@ -1,4 +1,5 @@
-﻿<?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
+<?php $pagename = "holofotes";   ?>
+<?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -14,7 +15,7 @@
          
             <div class="ofertas">
                 <?php 
-					$SelectPerson = mysqli_query($conn, "SELECT * FROM product WHERE type_pro=2 ORDER BY id_pro, featured_pro DESC");
+					$SelectPerson = mysqli_query($conn, "SELECT * FROM product WHERE type_pro=2 ORDER BY featured_pro DESC");
 					while($Person=mysqli_fetch_object($SelectPerson)):
 				?>
                 <div class="bloc_ofertas">

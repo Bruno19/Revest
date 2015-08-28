@@ -1,4 +1,5 @@
-﻿<?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
+<?php $pagename = "holofotes";   ?>
+<?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -13,7 +14,7 @@
 			<img src="imagens/tit-orgaos-setor.jpg" alt="Orgãos do Setor" class="Titulos TitulosGrandes right"/>
 		
 		<?php
-			$SelectOrgaos = mysqli_query($conn, "SELECT * FROM orgaos ORDER BY id_or DESC");
+			$SelectOrgaos = mysqli_query($conn, "SELECT * FROM orgaos ORDER BY title_or");
 			while($orgaos = mysqli_fetch_object($SelectOrgaos)):
 		?>
 			<div class="BlocoConteudo1 BlocoQuemSomos right">

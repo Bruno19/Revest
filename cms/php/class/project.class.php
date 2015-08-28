@@ -75,7 +75,7 @@
 						<td>'.$Num.'</td>
 						<td>'.implode('/', array_reverse(explode('-', $Data->date_pr))).'</a></td>
 						<td><button class="Btn" onclick="DeletarProjeto('.$Data->id_pr.', '.$Page.')">Excluir</button></td>
-						<td><a href="project.php?action=addimages&type='.$Type.'&id='.$Data->id_pr.'">Adicionar</a></td>
+						<td><a href="project.php?action=addimages&type='.$Type.'&id='.$Data->id_pr.'">Editar</a></td>
 					</tr>
 				';
 			}

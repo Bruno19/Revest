@@ -1,4 +1,6 @@
-﻿<?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
+<?php $pagename = "holofotes";   ?>
+
+<?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -19,8 +21,8 @@
 					echo '<script type="text/javascript">location.href="index.php"</script>';
 				}
 			}else{
-				$Selectproject = mysqli_query($conn, "SELECT * FROM projects ORDER BY id_pr DESC");
-				if(mysqli_num_rows($Selectproject)==1){
+				$Selectproject = mysqli_query($conn, "SELECT * FROM projects ORDER BY id_pr DESC")or die(mysqli_error($conn));
+				if(mysqli_num_rows($Selectproject)>0){
 					$Project = mysqli_fetch_object($Selectproject);
 				}else{
 					echo '<script type="text/javascript">location.href="index.php"</script>';

@@ -213,5 +213,28 @@
 				';
 			}
 		}
+		
+		function LoadMapUf($Conn, $Uf, $Area){
+			mysqli_set_charset($Conn, "utf8");
+			$Select = mysqli_query($Conn, "SELECT * FROM mapping WHERE uf_ma='$Uf' AND area_ma=$Area ORDER BY id_ma DESC")or die(mysqli_error($Conn));
+			if(mysqli_num_rows($Select)>0){
+				while($Mapping=mysqli_fetch_object($Select)){
+					echo '
+						<div class="resultados">
+							<b>'.$Mapping->name_ma.'</b> <br/> 
+							  '.$Mapping->info_ma.' <br/> 
+								'.$Mapping->cont1_ma.' <br/> 
+								'.$Mapping->cont2_ma.'
+						</div> 
+					';
+				}
+			}else{
+				echo '
+					<div class="resultados">
+						<b>Não existe dados desta região!</b> <br/> 
+					</div> 
+				';
+			}
+		}
 	}
 ?>

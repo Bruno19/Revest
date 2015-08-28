@@ -10,15 +10,24 @@
 	<body>
 		<?php include_once('includes/header.php');?>
 		<?php include_once('includes/menu.php');?>
-        <?php
-			include_once('cms/php/class/news.class.php');
+        <?php			
 			include_once('cms/php/escapeSQL.php');
-			$get = LimparGeral($_GET);
-			$Doacao = new News;
-			if($Doacao->SelectUniqueNews($conn, $get['id'], 2)==false){
-				echo '<script type="text/javascript">location.href="index.php";</script>';
-				exit;
-			}			
+			if(isset($_GET['id']) && $_GET['id']!=null){
+				$get = LimparGeral($_GET);				
+				$SelectDoacao = mysqli_query($conn, "SELECT * FROM news WHERE type_no=2 AND id_no=$get[id] ORDER BY id_no DESC");
+				if(mysqli_num_rows($SelectDoacao)>0){
+					$Doacao = mysqli_fetch_object($SelectDoacao);
+				}else{
+					exit;
+				}
+			}else{
+				$SelectDoacao = mysqli_query($conn, "SELECT * FROM news WHERE type_no=2 ORDER BY id_no DESC");
+				if(mysqli_num_rows($SelectDoacao)>0){
+					$Doacao = mysqli_fetch_object($SelectDoacao);
+				}else{
+					exit;
+				}
+			}
 		?>
 		<div class="Centro FundoConteudo contato_overflow">
 			<img src="imagens/doacao.jpg" alt="Contato" class="Titulos TitulosGrandes right" style="margin-bottom: 10px;" />
@@ -36,32 +45,32 @@
                     
                     <div class="galeria_doacao">						
                         <div class="imgs_doacao">
-							<a href="cms/imagens/news/<?php echo $Doacao->Image1;?>" data-rel="lightbox" style="text-decoration: none">
-								<img src="cms/imagens/news/<?php echo $Doacao->Image1;?>" alt="<?php echo $Doacao->Title;?>"/>
+							<a href="cms/imagens/news/<?php echo $Doacao->image1_no;?>" data-rel="lightbox" style="text-decoration: none">
+								<img src="cms/imagens/news/<?php echo $Doacao->image1_no;?>" alt="<?php echo $Doacao->title_no;?>"/>
 							</a>
 						</div>
                         <div class="imgs_doacao" style="float:right;">
-							<a href="cms/imagens/news/<?php echo $Doacao->Image2;?>" data-rel="lightbox" style="text-decoration: none">
-								<img src="cms/imagens/news/<?php echo $Doacao->Image2;?>" alt="<?php echo $Doacao->Title;?>"/>
+							<a href="cms/imagens/news/<?php echo $Doacao->image2_no;?>" data-rel="lightbox" style="text-decoration: none">
+								<img src="cms/imagens/news/<?php echo $Doacao->image2_no;?>" alt="<?php echo $Doacao->title_no;?>"/>
 							</a>
 						</div>
                         <div class="imgs_doacao">
-							<a href="cms/imagens/news/<?php echo $Doacao->Image3;?>" data-rel="lightbox" style="text-decoration: none">
-								<img src="cms/imagens/news/<?php echo $Doacao->Image3;?>" alt="<?php echo $Doacao->Title;?>"/>
+							<a href="cms/imagens/news/<?php echo $Doacao->image3_no;?>" data-rel="lightbox" style="text-decoration: none">
+								<img src="cms/imagens/news/<?php echo $Doacao->image3_no;?>" alt="<?php echo $Doacao->title_no;?>"/>
 							</a>
 						</div>
                         <div class="imgs_doacao" style="float:right;">
-							<a href="cms/imagens/news/<?php echo $Doacao->Image4;?>" data-rel="lightbox" style="text-decoration: none">
-								<img src="cms/imagens/news/<?php echo $Doacao->Image4;?>" alt="<?php echo $Doacao->Title;?>"/>
+							<a href="cms/imagens/news/<?php echo $Doacao->image4_no;?>" data-rel="lightbox" style="text-decoration: none">
+								<img src="cms/imagens/news/<?php echo $Doacao->image4_no;?>" alt="<?php echo $Doacao->title_no;?>"/>
 							</a>
 						</div>
                     </div>
                     
                     <div class="texto_doacao">
-                        <div class="titulo"><h1><?php echo $Doacao->Title;?></h1> <a href="">Ver todas</a></div>
+                        <div class="titulo"><h1><?php echo $Doacao->title_no;?></h1> <a href="">Ver todas</a></div>
                         
 						<div class="Conteudo">
-                        	<?php echo str_replace('&#39;', "'", str_replace('&#34;', '"', $Doacao->Content));?>
+                        	<?php echo str_replace('&#39;', "'", str_replace('&#34;', '"', $Doacao->content_no));?>
 						</div>
                     </div>
                 </div>

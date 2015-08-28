@@ -53,7 +53,7 @@
 				$Limit=0;
 			}
 			
-			$SelectClipping = mysqli_query($Conn, "SELECT * FROM clipping WHERE type_c=$Type ORDER BY id_c DESC LIMIT $Limit, $Quant");
+			$SelectClipping = mysqli_query($Conn, "SELECT * FROM clipping WHERE type_c=$Type ORDER BY id_c ASC LIMIT $Limit, $Quant");
 			while($Data = mysqli_fetch_object($SelectClipping)){
 				echo '
 					<tr class="LinhatablePar">

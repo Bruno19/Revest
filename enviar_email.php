@@ -10,8 +10,8 @@
         
         // aqui começa o envio do e-mail
         
-        $send->Username = 'brunoaparecido1994@bol.com.br'; // email para autenticar o envio
-        $send->Password = 'bruno7'; // Senha do email de autenticaçao
+        $send->Username = 'xxx'; // email para autenticar o envio
+        $send->Password = 'xxx'; // Senha do email de autenticaçao
         $send->From = $from;
         $send->FromName = $nameFrom;
         $send->IsHTML(true); // seta que é html o envio

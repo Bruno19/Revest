@@ -1,4 +1,6 @@
-﻿<?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
+<?php $pagename = "quem-somos";   ?>
+
+<?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>

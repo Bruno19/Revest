@@ -2,23 +2,15 @@
 	if(isset($_POST['action'])){
 		if($_POST['action']=='cadpartner'){
 			include_once('php/escapeSQL.php');
-			include_once('php/class/resize.class.php');
 			$post = EscapeArray($_POST);
 			
 			$Img = $_FILES['image'];
 			if($Img['type']=='image/jpeg' || $Img['type']=='image/png'){
 				
-				$Extencao =  substr($Img['name'], -4);
+				$Extencao =  substr($Img['name'], -4);				
 				
-				$tempo = time().$Extencao;
 				$NomeUnico = md5(time()).$Extencao;
-				move_uploaded_file($Img['tmp_name'], 'imagens/upar'.$tempo);			
-				
-				$resizeObj = new resize('imagens/upar'.$tempo);	
-				$resizeObj -> resizeImage(205, 87, 'crop');		
-				$resizeObj -> saveImage('imagens/parceiros/'.$NomeUnico, 100);			
-					
-				unlink('imagens/upar'.$tempo);
+				move_uploaded_file($Img['tmp_name'], 'imagens/parceiros/'.$NomeUnico);		
 				
 				$Insert = mysqli_query($conn, "INSERT INTO partners(image_pa, url_pa)VALUES('$NomeUnico', '$post[url]')");
 				if($Insert){
@@ -56,4 +48,41 @@
 		mysqli_query($conn, "DELETE FROM partners WHERE id_pa=$_POST[id]");
 		echo '<script type="text/javascript">location.href="";</script>';
 	}
+	
+	
+	/* 
+	
+	if($_POST['action']=='cadpartner'){
+			include_once('php/escapeSQL.php');
+			include_once('php/class/resize.class.php');
+			$post = EscapeArray($_POST);
+			
+			$Img = $_FILES['image'];
+			if($Img['type']=='image/jpeg' || $Img['type']=='image/png'){
+				
+				$Extencao =  substr($Img['name'], -4);
+				
+				$tempo = time().$Extencao;
+				$NomeUnico = md5(time()).$Extencao;
+				move_uploaded_file($Img['tmp_name'], 'imagens/upar'.$tempo);			
+				
+				$resizeObj = new resize('imagens/upar'.$tempo);	
+				$resizeObj -> resizeImage(205, 87, 'crop');		
+				$resizeObj -> saveImage('imagens/parceiros/'.$NomeUnico, 100);			
+					
+				unlink('imagens/upar'.$tempo);
+				
+				$Insert = mysqli_query($conn, "INSERT INTO partners(image_pa, url_pa)VALUES('$NomeUnico', '$post[url]')");
+				if($Insert){
+					echo '<script type="text/javascript">location.href="";</script>';
+				}else{
+					echo '<script type="text/javascript">alert("Erro ao realizar operação! \n Código do erro: '.mysqli_error($conn).'."); history.back();</script>';
+					unlink('imagens/parceiros/'.$NomeUnico);
+				}
+			}else{
+				echo '<script type="text/javascript">alert("Escolha uma imagem JPEG ou PNG"); history.back();</script>';
+			}
+		}
+		
+	*/
 ?>

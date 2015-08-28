@@ -131,7 +131,7 @@
 				UPDATE news SET 
 					title_no='$Data[title]', 
 					content_no='$Data[content]',
-					featured_no=$Data[featured]
+					featured_no=$Data[featured] 
 				WHERE id_no=$Data[id]
 			");
 			

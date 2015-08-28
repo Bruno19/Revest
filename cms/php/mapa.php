@@ -18,6 +18,10 @@
 			$Mapa->LoadMapping($conn, $post['cidade'], $post['area']);
 		}
 		
+		if($_POST['action']=='loadmapuf'){
+			$Mapa->LoadMapUf($conn, $post['uf'], $post['area']);
+		}
+		
 		if($_POST['action']=='loadlist'){
 			$Mapa->SelectMultMapping($conn, $post['type'], $post['page']);
 		}

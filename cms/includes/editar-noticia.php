@@ -65,7 +65,14 @@
 				<input type="hidden" name="field" value="image1_no"/>
 				<input type="hidden" name="action" value="alter-image"/>
 				<input type="file" name="image" accept="image/jpeg" class="Campo Btn CadEmp AlterDs"/>
-				<input type="submit" value="Alterar Imagem" class="Campo Btn CadEmp AlterDs"/>
+				<input type="submit" value="Alterar Imagem" class="Campo Btn CadEmp AlterDs" style="float: left;"/>
+			</form>
+			<form name="delimg" method="post" action="" enctype="multipart/form-data">
+				<input type="hidden" name="id" value="<?php echo $News->Id;?>"/>
+				<input type="hidden" name="name" value="<?php echo $News->Image1;?>"/>
+				<input type="hidden" name="field" value="image1_no"/>
+				<input type="hidden" name="action" value="del-image"/>
+				<input type="submit" value="Deletar Imagem" class="Campo Btn CadEmp AlterDs" style="background: #d00; float: right;"/>
 			</form>
 		</div>
 		
@@ -77,7 +84,14 @@
 				<input type="hidden" name="field" value="image2_no"/>
 				<input type="hidden" name="action" value="alter-image"/>
 				<input type="file" name="image" accept="image/jpeg" class="Campo Btn CadEmp AlterDs"/>
-				<input type="submit" value="Alterar Imagem" class="Campo Btn CadEmp AlterDs"/>
+				<input type="submit" value="Alterar Imagem" class="Campo Btn CadEmp AlterDs" style="float: left;"/>
+			</form>
+			<form name="delimg" method="post" action="" enctype="multipart/form-data">
+				<input type="hidden" name="id" value="<?php echo $News->Id;?>"/>
+				<input type="hidden" name="name" value="<?php echo $News->Image2;?>"/>
+				<input type="hidden" name="field" value="image2_no"/>
+				<input type="hidden" name="action" value="del-image"/>
+				<input type="submit" value="Deletar Imagem" class="Campo Btn CadEmp AlterDs" style="background: #d00; float: right;"/>
 			</form>
 		</div>
 		
@@ -89,7 +103,15 @@
 				<input type="hidden" name="field" value="image3_no"/>
 				<input type="hidden" name="action" value="alter-image"/>
 				<input type="file" name="image" accept="image/jpeg" class="Campo Btn CadEmp AlterDs"/>
-				<input type="submit" value="Alterar Imagem" class="Campo Btn CadEmp AlterDs"/>
+				<input type="submit" value="Alterar Imagem" class="Campo Btn CadEmp AlterDs" style="float: left;"/>
+			</form>
+			<form name="delimg" method="post" action="" enctype="multipart/form-data">
+				<input type="hidden" name="id" value="<?php echo $News->Id;?>"/>
+				<input type="hidden" name="name" value="<?php echo $News->Image3;?>"/>
+				<input type="hidden" name="field" value="image3_no"/>
+				<input type="hidden" name="action" value="del-image"/>
+				<input type="submit" value="Deletar Imagem" class="Campo Btn CadEmp AlterDs" style="background: #d00; float: right;"/>
+			</form>
 			</form>
 		</div>
 		
@@ -101,7 +123,14 @@
 				<input type="hidden" name="field" value="image4_no"/>
 				<input type="hidden" name="action" value="alter-image"/>
 				<input type="file" name="image" accept="image/jpeg" class="Campo Btn CadEmp AlterDs"/>
-				<input type="submit" value="Alterar Imagem" class="Campo Btn CadEmp AlterDs"/>
+				<input type="submit" value="Alterar Imagem" class="Campo Btn CadEmp AlterDs" style="float: left;"/>
+			</form>
+			<form name="delimg" method="post" action="" enctype="multipart/form-data">
+				<input type="hidden" name="id" value="<?php echo $News->Id;?>"/>
+				<input type="hidden" name="name" value="<?php echo $News->Image4;?>"/>
+				<input type="hidden" name="field" value="image4_no"/>
+				<input type="hidden" name="action" value="del-image"/>
+				<input type="submit" value="Deletar Imagem" class="Campo Btn CadEmp AlterDs" style="background: #d00; float: right;"/>
 			</form>
 		</div>
 		<?php  include_once('php/images-news.php');?>

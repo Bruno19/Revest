@@ -1,3 +1,27 @@
+/*Claquete hover*/
+.FundoSuperior .MenuSuperior #hover_claquete:hover{
+    background-image: url("../imagens/icones/claquete.png");
+    background-repeat: no-repeat;
+    background-position: 0px 10px;
+}
+
+
+
+.FundoSuperior .MenuSuperior .claquete_ativa{
+    background-image: url("../imagens/icones/claquete.png");
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+
+
+
+
+
+
 
 .Centro {
     height: auto;
@@ -19,7 +43,7 @@ nav {
     margin-top: 20px;
     position: absolute;
     right: 0;
-    width: 60%;
+    width: 74%;
 }
 .MenuSuperior {
     list-style: outside none none;
@@ -302,12 +326,21 @@ nav {
     text-align: center;
     text-transform: uppercase;
 }
-.ParceirosHome .LogoParceiroHome {
-    height: auto;
+
+.BoxLogosParceiros{
+	height: 87px;
     margin-bottom: 5px;
     margin-left: 5%;
     margin-top: 5px;
     width: 20%;
+	text-align: center;
+}
+
+.ParceirosHome .LogoParceiroHome {
+    width: auto;
+    height: auto;
+	max-width: 100%;
+	max-height: 87px;
 }
 .Titulos {
     margin-bottom: 40px;
@@ -375,6 +408,7 @@ nav {
     border-radius:5px;
 }
 .FundoConteudo .esquerda select {
+    -webkit-appearance: none;
     -moz-appearance: none;
     background: #898989 url("../imagens/icones/seta_baixo_select.png") no-repeat scroll right center;
     border: medium none;
@@ -384,13 +418,17 @@ nav {
     font-size: 16px;
     font-weight: bold;
     margin-top: 25px;
+    cursor:pointer;
     padding: 5px;
     width: 393px;
-}.FundoConteudo .esquerda select option {
-    padding-left:5px;
+}
+.FundoConteudo .esquerda select option {
+    padding-left:5px;   
+    cursor:pointer;
 }
 .FundoConteudo .esquerda select:hover {
     -moz-appearance: none;
+       -webkit-appearance: none;
     background: #dbbd39 url("../imagens/icones/seta_baixo_select.png") no-repeat scroll right center;
     border: medium none;
     box-shadow: none;
@@ -582,6 +620,17 @@ nav {
     position: relative;
     width: 790px;
 }
+
+.FundoConteudo .doacao .centraliza_doacao .galeria_doacao .Unica_img_doacao{
+	width: 100%;
+	height: auto;
+}
+
+.FundoConteudo .doacao .centraliza_doacao .galeria_doacao .Unica_img_doacao img{
+	width: 100%;
+	height: auto;
+}
+
 .FundoConteudo .doacao .centraliza_doacao .imgs_doacao {
     background: #404040 none repeat scroll 0 0;
     float: left;
@@ -693,6 +742,7 @@ nav {
 }
 .FundoConteudo .info_direita select {
     -moz-appearance: none;
+       -webkit-appearance: none;
     background: #d1d1d1 url("../imagens/icones/seta_baixo_select.png") no-repeat scroll right center;
     border: medium none;
     box-shadow: none;
@@ -705,7 +755,7 @@ nav {
     width: 100%;
 }
 .FundoConteudo .info_direita button {
-    -moz-appearance: none;
+    -moz-appearance: none;   -webkit-appearance: none;
     background: #f5d039 none repeat scroll right center;
     border: medium none;
     box-shadow: none;

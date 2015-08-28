@@ -30,5 +30,15 @@
 				}
 			}
 		}
+		
+		if($_POST['action']=='del-image'){
+			if($_POST['name']!='none.jpg'){
+				unlink('imagens/news/'.$_POST['name']);
+				mysqli_query($conn, "UPDATE news SET $_POST[field]='none.jpg' WHERE id_no=$_POST[id]");
+				echo '<script type="text/javascript"> location.href="";</script>';
+			}
+		}
 	}
+	
+	
 ?>

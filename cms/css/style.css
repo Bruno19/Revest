@@ -562,12 +562,20 @@ footer{
 }
 
 .Partner{
+	width: 205px;
+	height: 150px;
 	float: left;
 	margin-bottom: 20px;
 	text-align: center;
 	margin-right: 20px;
 }
 
+.Partner img{
+	width: auto;
+	height: auto;
+	max-width: 205px;
+	max-height: 87px;
+}
 .Partner a{
 	text-decoration: none;
 	color: #333;

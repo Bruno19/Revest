@@ -30,16 +30,16 @@
 				</li>
 				<li>
 					<a href="tecnicos.php">
-						<div class="FundoSubMenu f4"></div>
-						<div class="TextoMenu">
-							Técnicos<br/>
+						<div class="FundoSubMenu f4" style="width: 27%;"></div>
+						<div class="TextoMenu" style="width: 70%;">
+							Grupo técnico<br/>
 							IN CENA
 						</div>
 					</a>
 				</li>
 				<li style="margin-left:10px;">
 					<a href="ofertas.php">
-						<div class="FundoSubMenu f5"></div>
+						<div class="FundoSubMenu f5" style="width: 27%;"></div>
 						<div class="TextoMenu">
 							Ofertas<br/>
 							IN CENA
@@ -59,28 +59,28 @@
 					<a href="doacao.php">
 						<div class="FundoSubMenu f7"></div>
 						<div class="TextoMenu">
-							Doação<br/>
+							Doações<br/>
 							IN CENA
 						</div>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<?php
+						$SelectMidiakit = mysqli_query($conn, "SELECT * FROM midiakit");
+						$Midia = mysqli_fetch_object($SelectMidiakit);
+						if($Midia->existe==0){
+							echo '
+								<a href="javascript:alert('."'".'Nenhum conteúdo para download!'."'".')">
+							';
+						}else{
+							echo '
+								<a href="cms/midiakit/'.$Midia->nome.'" download="'.$Midia->nome.'">
+							';
+						}
+					?>
 						<div class="FundoSubMenu f8"></div>
 						<div class="TextoMenu">
-						<?php
-							$SelectMidiakit = mysqli_query($conn, "SELECT * FROM midiakit");
-							$Midia = mysqli_fetch_object($SelectMidiakit);
-							if($Midia->existe==0){
-								echo '
-									<a href="javascript:alert('."'".'Nenhum conteúdo para download!'."'".')" style="color: inherit; text-decoration: none">Baixe Nosso<br/>Mídia Kit</a>
-								';
-							}else{
-								echo '
-									<a href="cms/midiakit/'.$Midia->nome.'" download="'.$Midia->nome.'" style="color: inherit; text-decoration: none">Baixe Nosso<br/>Mídia Kit</a>
-								';
-							}
-						?>							
+							Baixe Nosso<br/>Mídia Kit
 						</div>
 					</a>
 				</li>

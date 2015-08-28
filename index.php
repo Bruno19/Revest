@@ -1,4 +1,7 @@
-﻿<?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
+<?php $pagename = "home";   ?>
+
+
+<?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -67,25 +70,40 @@
 		<div class="Centro FundoConteudo">
 			<?php
 				$SelectDestaque1 = mysqli_query($conn, "SELECT * FROM news WHERE featured_no=1 AND type_no=1")or die(mysqli_error($conn));
-				$Destaque1=mysqli_fetch_object($SelectDestaque1);
+                                if(mysqli_num_rows($SelectDestaque1 )>0):
+				   $Destaque1=mysqli_fetch_object($SelectDestaque1);
+                                
 			?>
 			<a href="materias.php?id=<?php echo $Destaque1->id_no;?>" style="text-decoration: none">
 			<div class="NoticiaDestaque1">
 				<img src="cms/imagens/news/<?php echo $Destaque1->image1_no;?>" alt="<?php echo $Destaque1->title_no;?>"/>
 				<div class="Titulo">
-					<?php echo $Destaque1->title_no;?>
+					<?php
+						if(strlen($Destaque1->title_no)>120){
+						echo substr($Destaque1->title_no, 0, 120).'...';
+						}else{
+							echo  $Destaque1->title_no;
+						}
+					?>
 				</div>
 			</div>
 			</a>
+                       <?php endif;?>
 		<?php 
 			$SelectNoticias1 = mysqli_query($conn, "SELECT id_no, title_no, image1_no FROM news WHERE type_no=1 ORDER BY id_no DESC LIMIT $Limite, 4");
 			while($Dados1=mysqli_fetch_object($SelectNoticias1)):
 		?>	
-			<a href="materias.php?id=<?php echo $Dados1->id_no;?>" style="text-decoration: none">
+			<a href="materias.php?id=<?php echo $Dados1->id_no;?>" target="_blank" style="text-decoration: none">
 			<div class="OutrasNoticias left">
 				<img src="cms/imagens/news/<?php echo $Dados1->image1_no;?>" alt="<?php echo $Dados1->title_no;?>"/>
 				<div class="Titulo">
-					<?php echo $Dados1->title_no;?>
+					<?php
+						if(strlen($Dados1->title_no)>31){
+						echo substr($Dados1->title_no, 0, 31).'...';
+						}else{
+							echo  $Dados1->title_no;
+						}
+					?>
 				</div>
 			</div>
 			</a>
@@ -120,13 +138,13 @@
 			</div>
 			<div class="esp"></div>
 			
-			
+		
 			<div class="ListaUltimosCadastradosH left">
 				<h2>Profissionais IN CENA</h2>
 				<?php 
 					$SelectMapping1=mysqli_query($conn, "SELECT name_ma FROM mapping WHERE area_ma=1 ORDER BY id_ma DESC LIMIT 0, 3");
 					while($Mapping1=mysqli_fetch_object($SelectMapping1)){
-						echo '<a href="profissionais.php">'.$Mapping1->name_ma.'</a><br/>';
+						echo '<a href="profissionais.php" >'.$Mapping1->name_ma.'</a><br/>';
 					}
 				?>
 			</div>
@@ -136,7 +154,7 @@
 				<?php 
 					$SelectMapping2=mysqli_query($conn, "SELECT name_ma FROM mapping WHERE area_ma=2 ORDER BY id_ma DESC LIMIT 0, 3");
 					while($Mapping2=mysqli_fetch_object($SelectMapping2)){
-						echo '<a href="fabricantes.php">'.$Mapping2->name_ma.'</a><br/>';
+						echo '<a href="fabricantes.php" >'.$Mapping2->name_ma.'</a><br/>';
 					}
 				?>
 			</div>
@@ -146,7 +164,7 @@
 				<?php 
 					$SelectMapping3=mysqli_query($conn, "SELECT name_ma FROM mapping WHERE area_ma=3 ORDER BY id_ma DESC LIMIT 0, 3");
 					while($Mapping3=mysqli_fetch_object($SelectMapping3)){
-						echo '<a href="lojas.php">'.$Mapping3->name_ma.'</a><br/>';
+						echo '<a href="lojas.php" >'.$Mapping3->name_ma.'</a><br/>';
 					}
 				?>
 			</div>
@@ -156,7 +174,7 @@
 				<?php 
 					$SelectMapping4=mysqli_query($conn, "SELECT title_pro FROM product WHERE type_pro=1 ORDER BY id_pro DESC LIMIT 0, 3");
 					while($Mapping4=mysqli_fetch_object($SelectMapping4)){
-						echo '<a href="ofertas.php">'.$Mapping4->title_pro.'</a><br/>';
+						echo '<a href="ofertas.php" >'.$Mapping4->title_pro.'</a><br/>';
 					}
 				?>
 			</div>			
@@ -167,10 +185,16 @@
 				if(mysqli_num_rows($SelectDestaque2)==1):
 				$Destaque2=mysqli_fetch_object($SelectDestaque2);
 			?>
-			<a href="materias.php?id=<?php echo $Destaque2->id_no;?>" style="text-decoration: none">
-			<div class="NoticiaDestaque2 left" style="background: url(cms/imagens/news/<?php echo $Destaque2->image1_no;?>) no-repeat; background-color: #333; background-size: 100% auto; background-position: center;">				
+			<a href="materias.php?id=<?php echo $Destaque2->id_no;?>" target="_blank" style="text-decoration: none">
+			<div class="NoticiaDestaque2 left" style="background: url(cms/imagens/news/<?php echo $Destaque2->image1_no;?>) no-repeat; background-color: #333; background-size: 126% auto; background-position: center;">				
 				<div class="Titulo">
-					<?php echo $Destaque2->title_no;?>
+					<?php
+						if(strlen($Destaque2->title_no)>90){
+						echo substr($Destaque2->title_no, 0, 90).'...';
+						}else{
+							echo  $Destaque2->title_no;
+						}
+					?>
 				</div>
 			</div>
 			</a>
@@ -182,11 +206,17 @@
 				$SelectNoticias2 = mysqli_query($conn, "SELECT id_no, title_no, image1_no FROM news WHERE type_no=1 ORDER BY id_no DESC LIMIT $l1, 2")or die(mysqli_error($conn));
 				while($Dados2=mysqli_fetch_object($SelectNoticias2)):
 			?>
-			<a href="materias.php?id=<?php echo $Dados2->id_no;?>" style="text-decoration: none">
+			<a href="materias.php?id=<?php echo $Dados2->id_no;?>" target="_blank" style="text-decoration: none">
 			<div class="OutrasNoticias right TopOutrasNot">
 				<img src="cms/imagens/news/<?php echo $Dados2->image1_no;?>" alt="<?php echo $Dados2->title_no;?>"/>
 				<div class="Titulo">
-					<?php echo $Dados2->title_no;?>
+					<?php
+						if(strlen($Dados2->title_no)>31){
+						echo substr($Dados2->title_no, 0, 31).'...';
+						}else{
+							echo  $Dados2->title_no;
+						}
+					?>
 				</div>
 			</div>
 			</a>
@@ -198,11 +228,17 @@
 				$SelectNoticias3 = mysqli_query($conn, "SELECT id_no, title_no, image1_no FROM news WHERE type_no=1 ORDER BY id_no DESC LIMIT $l2, 2")or die(mysqli_error($conn));
 				while($Dados3=mysqli_fetch_object($SelectNoticias3)):
 			?>			
-			<a href="materias.php?id=<?php echo $Dados3->id_no;?>" style="text-decoration: none">
+			<a href="materias.php?id=<?php echo $Dados3->id_no;?>" target="_blank" style="text-decoration: none">
 			<div class="OutrasNoticias left">
 				<img src="cms/imagens/news/<?php echo $Dados3->image1_no;?>" alt="<?php echo $Dados3->title_no;?>"/>
 				<div class="Titulo">
-					<?php echo $Dados3->title_no;?>
+					<?php
+						if(strlen($Dados3->title_no)>31){
+						echo substr($Dados3->title_no, 0, 31).'...';
+						}else{
+							echo  $Dados3->title_no;
+						}
+					?>
 				</div>
 			</div>
 			</a>
@@ -215,7 +251,15 @@
 						$SelectDonation = mysqli_query($conn, "SELECT id_no, title_no FROM news WHERE type_no=2 ORDER BY id_no DESC");
 						while($Donations = mysqli_fetch_object($SelectDonation)):
 					?>
-					<a href="doacao.php?id=<?php echo $Donations->id_no;?>"><?php echo $Donations->title_no;?></a><br/>
+					<a href="doacao.php?id=<?php echo $Donations->id_no;?>" target="_blank">
+						<?php
+							if(strlen($Donations->title_no)>30){
+							echo substr($Donations->title_no, 0, 30).'...';
+							}else{
+								echo  $Donations->title_no;
+							}
+						?>
+					</a><br/>
 					<?php endwhile;?>
 				</div>
 			</div>
@@ -226,11 +270,17 @@
 				$SelectNoticias4 = mysqli_query($conn, "SELECT id_no, title_no, image1_no FROM news WHERE type_no=1 ORDER BY id_no DESC LIMIT $l3, 2")or die(mysqli_error($conn));
 				while($Dados4=mysqli_fetch_object($SelectNoticias4)):
 			?>			
-			<a href="materias.php?id=<?php echo $Dados4->id_no;?>" style="text-decoration: none">
+			<a href="materias.php?id=<?php echo $Dados4->id_no;?>" target="_blank" style="text-decoration: none">
 			<div class="OutrasNoticias left">
 				<img src="cms/imagens/news/<?php echo $Dados4->image1_no;?>" alt="<?php echo $Dados4->title_no;?>"/>
 				<div class="Titulo">
-					<?php echo $Dados4->title_no;?>
+					<?php
+						if(strlen($Dados4->title_no)>31){
+						echo substr($Dados4->title_no, 0, 31).'...';
+						}else{
+							echo  $Dados4->title_no;
+						}
+					?>
 				</div>
 			</div>
 			</a>
@@ -254,11 +304,17 @@
 				$SelectNoticias5 = mysqli_query($conn, "SELECT id_no, title_no, image1_no FROM news WHERE type_no=1 ORDER BY id_no DESC LIMIT $l4, 3")or die(mysqli_error($conn));
 				while($Dados5=mysqli_fetch_object($SelectNoticias5)):
 			?>			
-			<a href="materias.php?id=<?php echo $Dados5->id_no;?>" style="text-decoration: none">
+			<a href="materias.php?id=<?php echo $Dados5->id_no;?>" target="_blank" style="text-decoration: none">
 			<div class="OutrasNoticias left">
 				<img src="cms/imagens/news/<?php echo $Dados5->image1_no;?>" alt="<?php echo $Dados5->title_no;?>"/>
 				<div class="Titulo">
-					<?php echo $Dados5->title_no;?>
+					<?php
+						if(strlen($Dados5->title_no)>31){
+						echo substr($Dados5->title_no, 0, 31).'...';
+						}else{
+							echo  $Dados5->title_no;
+						}
+					?>
 				</div>
 			</div>
 			</a>
@@ -320,13 +376,15 @@
 					$SelectPartners = mysqli_query($conn, "SELECT * FROM partners");
 					while($partner=mysqli_fetch_object($SelectPartners)):
 				?>
-					<a href="<?php echo $partner->url_pa;?>" target="_blank">
-						<img src="cms/imagens/parceiros/<?php echo $partner->image_pa;?>" alt="parceiro" class="LogoParceiroHome left"/>
-					</a>
+					<div class="BoxLogosParceiros left">
+						<a href="<?php echo $partner->url_pa;?>" target="_blank">
+							<img src="cms/imagens/parceiros/<?php echo $partner->image_pa;?>" alt="parceiro" class="LogoParceiroHome"/>
+						</a>
+					</div>
 				<?php endwhile;?>
 				<div class="esp"></div>	
 			</div>			
 		</div>
 		<?php include_once('includes/footer.php');?>
 	</body>
-</html>
+</html>		

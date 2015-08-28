@@ -14,7 +14,7 @@
          
             <div class="ofertas">
                 <?php 
-					$SelectPerson = mysqli_query($conn, "SELECT * FROM product WHERE type_pro=1 ORDER BY id_pro DESC");
+					$SelectPerson = mysqli_query($conn, "SELECT * FROM product WHERE type_pro=1 ORDER BY featured_pro DESC");
 					while($Person=mysqli_fetch_object($SelectPerson)):
 				?>
                 <div class="bloc_ofertas">

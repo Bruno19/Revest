@@ -1,3 +1,4 @@
+	<?php error_reporting(0);?>
 		<header>
 			<div class="FundoSuperior">
 				<div class="Centro">
@@ -22,18 +23,163 @@
 					</div>
 					<nav>
 						<ul class="MenuSuperior">
-							<li>
+<?php 
+        if($pagename=="home"){
+
+?>
+							<li style="background-position: 35px 3px;" class="claquete_ativa" id="hover_claquete">
 								<a href="index.php" style="margin-right:48px;">
-									<img src="imagens/icones/claquete.png" alt="claquete" class="IconeMenuSuperior"/>
 									Home
 								</a>
 							</li>
-							<li>
+							<li style="background-position: 18px 3px; width: 150px;" id="hover_claquete">
 								<a href="quem-somos.php" style="margin-right:8px;">
 									Quem Somos
 								</a>
 							</li>
-							<li>
+							<li style="background-position: 58px 3px;" id="hover_claquete">
+								<a href="#">
+									Holofótes
+								</a>
+								<ul class="Dropdown">
+									<li onclick="location.href='personalidades.php'">
+										<a href="personalidades.php">Personalidades IN CENA</a>
+									</li>
+									<li onclick="location.href=''">
+										<a href="materias.php">Matérias e Artigos</a>
+									</li>
+									<li onclick="location.href='orgaos-do-setor.php'">
+										<a href="orgaos-do-setor.php">Orgãos do Setor</a>
+									</li>
+									<li onclick="location.href='noticias.php'">
+										<a href="noticias.php">Notícias</a>
+									</li>
+									<li onclick="location.href='projetos.php'">
+										<a href="projetos.php">Projetos</a>
+									</li>
+                                    <li onclick="location.href='newslatter.php'">
+										<a href="newslatter.php">Newslatter</a>
+									</li>
+								</ul>
+							</li>
+							<li style="background-position: 65px 3px;" id="hover_claquete">
+								<a href="#">
+									Anuncie
+								</a>
+							</li>
+							<li style="background-position: 63px 3px;" id="hover_claquete">
+								<a href="contato.php">
+									Contato
+								</a>
+							</li>
+<?php }elseif($pagename=="quem-somos"){ ?>
+                            
+							<li style="background-position: 35px 3px;"  id="hover_claquete">
+								<a href="index.php" style="margin-right:48px;">
+									Home
+								</a>
+							</li>
+							<li style="background-position: 18px 3px; width: 150px;" class="claquete_ativa" id="hover_claquete">
+								<a href="quem-somos.php" style="margin-right:8px;">
+									Quem Somos
+								</a>
+							</li>
+							<li style="background-position: 58px 3px;" id="hover_claquete">
+								<a href="#">
+									Holofótes
+								</a>
+								<ul class="Dropdown">
+									<li onclick="location.href='personalidades.php'">
+										<a href="personalidades.php">Personalidades IN CENA</a>
+									</li>
+									<li onclick="location.href=''">
+										<a href="materias.php">Matérias e Artigos</a>
+									</li>
+									<li onclick="location.href='orgaos-do-setor.php'">
+										<a href="orgaos-do-setor.php">Orgãos do Setor</a>
+									</li>
+									<li onclick="location.href='noticias.php'">
+										<a href="noticias.php">Notícias</a>
+									</li>
+									<li onclick="location.href='projetos.php'">
+										<a href="projetos.php">Projetos</a>
+									</li>
+                                    <li onclick="location.href='newslatter.php'">
+										<a href="newslatter.php">Newslatter</a>
+									</li>
+								</ul>
+							</li>
+							<li style="background-position: 65px 3px;" id="hover_claquete">
+								<a href="#">
+									Anuncie
+								</a>
+							</li>
+				            <li style="background-position: 63px 3px;" id="hover_claquete">
+								<a href="contato.php">
+									Contato
+								</a>
+							</li>
+<?php }elseif($pagename=="contato"){ ?>
+                            
+							<li style="background-position: 35px 3px;"  id="hover_claquete">
+								<a href="index.php" style="margin-right:48px;">
+									Home
+								</a>
+							</li>
+							<li style="background-position: 18px 3px; width: 150px;" id="hover_claquete">
+								<a href="quem-somos.php" style="margin-right:8px;">
+									Quem Somos
+								</a>
+							</li>
+							<li style="background-position: 58px 3px;" id="hover_claquete">
+								<a href="#">
+									Holofótes
+								</a>
+								<ul class="Dropdown">
+									<li onclick="location.href='personalidades.php'">
+										<a href="personalidades.php">Personalidades IN CENA</a>
+									</li>
+									<li onclick="location.href=''">
+										<a href="materias.php">Matérias e Artigos</a>
+									</li>
+									<li onclick="location.href='orgaos-do-setor.php'">
+										<a href="orgaos-do-setor.php">Orgãos do Setor</a>
+									</li>
+									<li onclick="location.href='noticias.php'">
+										<a href="noticias.php">Notícias</a>
+									</li>
+									<li onclick="location.href='projetos.php'">
+										<a href="projetos.php">Projetos</a>
+									</li>
+                                    <li onclick="location.href='newslatter.php'">
+										<a href="newslatter.php">Newslatter</a>
+									</li>
+								</ul>
+							</li>
+							<li style="background-position: 65px 3px;" id="hover_claquete">
+								<a href="#">
+									Anuncie
+								</a>
+							</li>
+                            				      
+							<li style="background-position: 63px 3px;" id="hover_claquete"  class="claquete_ativa">
+								<a href="contato.php">
+									Contato
+								</a>
+							</li>
+<?php }elseif($pagename=="holofotes"){ ?>
+                            
+							<li style="background-position: 35px 3px;"  id="hover_claquete">
+								<a href="index.php" style="margin-right:48px;">
+									Home
+								</a>
+							</li>
+							<li style="background-position: 18px 3px; width: 150px;" id="hover_claquete">
+								<a href="quem-somos.php" style="margin-right:8px;">
+									Quem Somos
+								</a>
+							</li>
+							<li style="background-position: 58px 3px;" id="hover_claquete" class="claquete_ativa">
 								<a href="#">
 									Holofótes
 								</a>
@@ -53,19 +199,71 @@
 									<li onclick="location.href='projetos.php'">
 										<a href="projetos.php">Projetos</a>
 									</li>
+                                    <li onclick="location.href='newslatter.php'">
+										<a href="newslatter.php">Newslatter</a>
+									</li>
 								</ul>
 							</li>
-							<li>
+							<li style="background-position: 65px 3px;" id="hover_claquete">
 								<a href="#">
 									Anuncie
 								</a>
 							</li>
-							<li>
+                            <li style="background-position: 63px 3px;" id="hover_claquete">
 								<a href="contato.php">
 									Contato
 								</a>
 							</li>
-						</ul>
+<?php }else if(!isset($pagename)){ ?>
+                            
+							<li style="background-position: 35px 3px;"  id="hover_claquete" class="claquete_ativa">
+								<a href="index.php" style="margin-right:48px;">
+									Home
+								</a>
+							</li>
+							<li style="background-position: 18px 3px; width: 150px;" id="hover_claquete">
+								<a href="quem-somos.php" style="margin-right:8px;">
+									Quem Somos
+								</a>
+							</li>
+							<li style="background-position: 58px 3px;" id="hover_claquete" >
+								<a href="#">
+									Holofótes
+								</a>
+								<ul class="Dropdown">
+									<li onclick="location.href='personalidades.php'">
+										<a href="personalidades.php">Personalidades IN CENA</a>
+									</li>
+									<li onclick="location.href=''">
+										<a href="#">Matérias e Artigos</a>
+									</li>
+									<li onclick="location.href='orgaos-do-setor.php'">
+										<a href="orgaos-do-setor.php">Orgãos do Setor</a>
+									</li>
+									<li onclick="location.href='noticias.php'">
+										<a href="noticias.php">Notícias</a>
+									</li>
+									<li onclick="location.href='projetos.php'">
+										<a href="projetos.php">Projetos</a>
+									</li>
+                                    <li onclick="location.href='newslatter.php'">
+										<a href="newslatter.php">Newslatter</a>
+									</li>
+								</ul>
+                                
+							</li>
+							<li style="background-position: 65px 3px;" id="hover_claquete">
+								<a href="#">
+									Anuncie
+								</a>
+							</li>
+                            <li style="background-position: 63px 3px;" id="hover_claquete">
+								<a href="contato.php">
+									Contato
+								</a>
+							</li>
+<?php } ?>					
+                        </ul>
 					</nav>
 					<div class="esp"></div>
 				</div>
