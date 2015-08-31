@@ -76,7 +76,7 @@
 			?>
 			<a href="materias.php?id=<?php echo $Destaque1->id_no;?>" style="text-decoration: none">
 			<div class="NoticiaDestaque1">
-				<img src="cms/imagens/news/<?php echo $Destaque1->image1_no;?>" alt="<?php echo $Destaque1->title_no;?>"/>
+				<img src="cms/imagens/news/<?php echo $Destaque1->image1_no;?>" alt="<?php echo $Destaque1->title_no;?>"/ class="ajusta">
 				<div class="Titulo">
 					<?php
 						if(strlen($Destaque1->title_no)>120){
@@ -369,22 +369,34 @@
 				?>
 			</div>
 		</div>
+		
+		
+		
 		<div class="ParceirosHome">
 			<div class="Centro">
 				<h2>Patrocinadores / Parceiros</h2>
-				<?php 
+		<?php 
 					$SelectPartners = mysqli_query($conn, "SELECT * FROM partners");
 					while($partner=mysqli_fetch_object($SelectPartners)):
 				?>
-					<div class="BoxLogosParceiros left">
-						<a href="<?php echo $partner->url_pa;?>" target="_blank">
-							<img src="cms/imagens/parceiros/<?php echo $partner->image_pa;?>" alt="parceiro" class="LogoParceiroHome"/>
+					<div class="BoxLogosParceiros">
+                        <center>
+									<a href="<?php echo $partner->url_pa;?>" target="_blank">
+							<img src="cms/imagens/parceiros/<?php echo $partner->image_pa;?>" alt="parceiro" class="img"/>
 						</a>
-					</div>
-				<?php endwhile;?>
+    
+                        </center>
+    
+					</div>	
+	<?php endwhile;?>
+	
+				
 				<div class="esp"></div>	
 			</div>			
 		</div>
+		
+		
+		
 		<?php include_once('includes/footer.php');?>
 	</body>
 </html>		

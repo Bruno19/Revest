@@ -31,16 +31,18 @@
 							<li>
 								<a href="noticia.php?action=list&type=news">Notícias Cadastradas</a>
 							</li>
-							<li>
-								<a href="#">Clipping de Notícias</a>
-								<ul class="DropDown2">
-									<li><a href="clipping.php?action=list&type=1">Lista de Cadastrados</a></li>
-									<li><a href="clipping.php?action=create&type=1">Cadastrar Novo</a></li>
-								</ul>
-							</li>
+							
+
 						</ul>
 					</li>
 					<li>
+						<a href="#">Clipping</a>
+						<ul class="DropDown">
+							<li><a href="clipping.php?action=list&type=1">Lista de Cadastrados</a></li>
+									<li><a href="clipping.php?action=create&type=1">Cadastrar Novo</a></li>
+						</ul>
+					</li>
+                    <li>
 						<a href="#">Doações</a>
 						<ul class="DropDown">
 							<li>

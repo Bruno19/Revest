@@ -29,13 +29,37 @@
     position: relative;
     width: 1024px;
 }
+
+.Centro .BoxLogosParceiros{
+      
+        height: 115px;
+        width:215px;
+        float: left; position:relative;
+        margin-top: 20px;
+  
+        max-width: 215px; 
+        margin-left:33px;
+}
+
+.Centro .BoxLogosParceiros .img{
+    width: auto;
+    height: auto;
+    max-width: 205px;
+    max-height: 87px;
+    position:relative;
+
+}
+
+
+
+
 .FundoConteudo {
     width: 1004px !important;
 }
 .Logo {
     float: left;
     height: auto;
-    width: auto;
+    width: 22%;
 }
 nav {
     bottom: 0;
@@ -70,7 +94,7 @@ nav {
     display: block;
 }
 .Dropdown li {
-    background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+    background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
     clear: both;
     cursor: pointer;
     margin-bottom: 10px;
@@ -132,8 +156,10 @@ nav {
 }
 .ImagemDestaqueTopo {
     height: auto;
-    margin-right: 8px;
-    width: 330px;
+    margin-right: 2px;
+    margin-top: 5px;
+    margin-left: 60px;
+    width: 25%;
 }
 .SubMenu {
     margin-top: 10px;
@@ -258,10 +284,10 @@ nav {
 }
 .ListaUltimosCadastradosH {
     background: #4f4f4f none repeat scroll 0 0;
-    height: auto;
+    height: 100px;
     margin-left: 0.8%;
     padding: 0.5%;
-    width: 23%;
+    width: 230px;
 }
 .ListaUltimosCadastradosH h2 {
     color: #dbbd39;
@@ -326,21 +352,12 @@ nav {
     text-align: center;
     text-transform: uppercase;
 }
-
-.BoxLogosParceiros{
-	height: 87px;
+.ParceirosHome .LogoParceiroHome {
+    height: auto;
     margin-bottom: 5px;
     margin-left: 5%;
     margin-top: 5px;
     width: 20%;
-	text-align: center;
-}
-
-.ParceirosHome .LogoParceiroHome {
-    width: auto;
-    height: auto;
-	max-width: 100%;
-	max-height: 87px;
 }
 .Titulos {
     margin-bottom: 40px;
@@ -543,6 +560,8 @@ nav {
 .FundoConteudo .ofertas .bloc_ofertas {
     float: right;
     height: auto;
+    border-bottom: 2px solid #F5D039;
+    padding-bottom: 30px;
     margin-top: 70px;
     width: 902px;
 }
@@ -620,17 +639,6 @@ nav {
     position: relative;
     width: 790px;
 }
-
-.FundoConteudo .doacao .centraliza_doacao .galeria_doacao .Unica_img_doacao{
-	width: 100%;
-	height: auto;
-}
-
-.FundoConteudo .doacao .centraliza_doacao .galeria_doacao .Unica_img_doacao img{
-	width: 100%;
-	height: auto;
-}
-
 .FundoConteudo .doacao .centraliza_doacao .imgs_doacao {
     background: #404040 none repeat scroll 0 0;
     float: left;
@@ -799,4 +807,93 @@ nav {
     position: absolute;
     text-align: left;
     width: 780px;
+}
+ 
+
+
+
+
+
+.contato_overflow .centraliza_barras{
+    width: 850px;
+    height: auto;
+
+    margin: 0 auto;
+
+}
+.contato_overflow .solicita{
+    width: 350px;
+    height: 800px;
+    margin-top: 20px;
+    float:right;
+}
+
+.contato_overflow .solicita .posso{
+    background:#F5D039;
+    width:182px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    height:30px;
+    margin-top:20px;
+    float: left;
+}
+.contato_overflow .solicita .posso a{
+    color:#8D8051;
+    float:left;
+    font-weight:bold;
+    text-decoration:none;
+    margin-top:5px;
+    margin-left:40px;
+}.contato_overflow .solicita .resultados{
+    color: #f5d039;
+    float: right;
+    font-family: "Century Gothic";
+    height: auto;
+    line-height: 23px;
+    float: left;
+    border-bottom:1px solid #f5d039; 
+    margin-bottom: 40px;
+    width: 350px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+.contato_overflow .doacoes{
+    width: 350px;
+    height: 800px;    margin-top: 20px;
+
+    float:left;
+}
+.contato_overflow .doacoes .posso{
+    background:#F5D039;
+    width:182px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    height:30px;
+    margin-top:20px;
+    float: left;
+}
+.contato_overflow .doacoes .posso a{
+    color:#8D8051;
+    float:left;
+    font-weight:bold;
+    text-decoration:none;
+    margin-top:5px;
+    margin-left:50px;
+}.contato_overflow .doacoes .resultados{
+    color: #f5d039;
+    float: right;
+    font-family: "Century Gothic";
+    height: auto;
+    line-height: 23px;
+    float: left;
+    border-bottom:1px solid #f5d039; 
+    margin-bottom: 40px;
+    width: 350px;
+    padding-bottom: 10px;
 }

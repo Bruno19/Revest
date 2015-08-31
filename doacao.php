@@ -1,4 +1,4 @@
-﻿<?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
+<?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -37,9 +37,9 @@
                 
                 <div class="centraliza_doacao">
                         <div class="barra_pesquisa">
-                            <a href="">Posso doar <img src="imagens/icones/seta.png"></a>
-                            <a href="">Aceito doação <img src="imagens/icones/seta.png"></a>
-                            <a href="">Ver doações e solicitações <img src="imagens/icones/seta.png"></a>
+                            <a href="doacao_incena.php">Posso doar <img src="imagens/icones/seta.png"></a>
+                            <a href="aceito_doacao.php">Aceito doação <img src="imagens/icones/seta.png"></a>
+                            <a href="solicitacoes.php">Ver doações e solicitações <img src="imagens/icones/seta.png"></a>
                             <div class="bloco_pesquisa"><label>Pesquisa</label></div>
                         </div>
                     
