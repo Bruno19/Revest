@@ -8,6 +8,22 @@
 		<?php include_once('includes/header.php');?>
 		<?php include_once('includes/menu.php');?>
 		
+        <script>
+            function cad_doacao(){
+                
+                var doar = $("doar").val();
+                var nome = $("#nome").val();
+                var email = $("#email").val();
+                var texto = $("#texto").val();
+
+
+                $.post('processa.php',{doar:"doar",email:email,nome:nome,texto:texto}).done(function(resultado){
+                    $('.resposta').html(resultado);
+          
+                });
+        }
+        </script>
+     
       
 		<div class="Centro FundoConteudo contato_overflow">
 			<img src="http://incena.esy.es/imagens/doacao.jpg" alt="Contato" class="Titulos TitulosGrandes right"/>
@@ -33,22 +49,22 @@
                             margin-top:5px;
                             margin-left:15px;
                         }
-                        </style>
+                    </style>
                             <div class="posso">
                                 <a href="">Posso doar</a>
                             </div>
                            
                             <br />
-<input type="text" placeholder="Nome" id="nome" class="input_text" style="margin-top: 0px;margin-bottom: 30px;"><br />
+    <input type="text" placeholder="Nome" id="nome" class="input_text" style="margin-top: 0px;margin-bottom: 30px;"><br />
     <input type="text" placeholder="Email" id="email" class="input_text" style="margin-top: 0px;margin-bottom: 30px;"><br />
     <textarea placeholder="Mensagem" id="texto" style="margin-top: 0px;"></textarea><br />
                 </center>
                    <label>Tel.: 11 9999.9999</label>
                 
-                    <input type="button" value="Enviar" class="btn" onclick="enviar_email()">
+                    <input type="button" value="Enviar" class="btn" onclick="cad_doacao()">
                </form>
               
-                     <div class="resposta"></div> 
+                    <div class="resposta"></div> 
             </div>
             
             

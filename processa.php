@@ -1,5 +1,11 @@
 <?php
-    
+
+	$conn = @mysql_connect('localhost', 'root', '', 'incena')or die(mysql_errno());
+	@mysql_select_db('incena');
+	
+
+
+
     if(isset($_POST['enviar_pro_email'])){
         
 
@@ -69,5 +75,28 @@ if (!empty($error)){
             
     
 
+     if(isset($_POST['doar'])){
+
+        $nome = $_POST["nome"];
+        $email = $_POST["email"];
+        $texto = $_POST["texto"];
+        $aprovado = 2;
+         
+         
+         if(empty($nome)){
+                echo "Campo NOME está vazio";
+         }elseif(empty($email)){
+                echo "Campo EMAIL está vazio";
+         }elseif(empty($texto)){
+                echo "Campo TEXTO está vazio";
+         }else{
+
+            $query = "INSERT INTO `doacao`(nome,email,msg,aprovado) VALUES ('$nome','$email','$texto','$aprovado')";
+            $executa = mysql_query($query);
+        
+            if($executa){
+                echo "Doacao cadastrado com sucesso";
+            }
+     }}
 
 ?>
