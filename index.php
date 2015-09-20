@@ -1,5 +1,5 @@
 <?php $pagename = "home";   ?>
-
+	<title>IN Cena </title>
 
 <?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
 <!DOCTYPE html>

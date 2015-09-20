@@ -35,7 +35,7 @@ header{
 }
 
 .Centro{
-	width: 930px;
+	width: 940px;
 	height: auto;
 	margin: auto;
 	position: relative;
@@ -609,3 +609,91 @@ footer{
 	font-size: 18px;
 	border: 1px solid #eee;
 }
+
+
+
+
+.CadCat .moderacao{
+	width: 100%;
+    height: auto;
+}
+.CadCat .moderacao .mod{
+    width:100%;
+    border:1px solid #ccc;
+    font-family: Calibri;
+    font-size: 14px;
+    font-weight:bold;
+}
+.CadCat .moderacao .tr1{
+    background:#939393;
+    color:#fff; 
+    height:50px;
+    text-align: center;
+    border-radius:10px;
+}
+.CadCat .moderacao .tr2{
+    background:#f2f2f2;
+    color:#585a54;
+    height:30px;    
+   
+    text-align: center;
+    font-size:17px;
+}
+.CadCat .moderacao .tr2 .recusar{
+    background: linear-gradient(#9d1e1e,#d63131);
+    background: -webkit-linear-gradient(#9d1e1e,#d63131);
+    border: none;
+    font-size: 14px;
+    cursor: pointer; width: 100%;
+    color: #fff;
+    padding: 10px;
+}
+.CadCat .moderacao .tr2 .recusar:hover{
+    background: linear-gradient(#d14242,#d63131);
+    background: -webkit-linear-gradient(#d14242,#d63131);
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+}
+.CadCat .moderacao .tr2 .aprovar{
+    background: linear-gradient(#8cc342,#729d38);
+    background: -webkit-linear-gradient(#8cc342,#729d38);
+    border: none;
+    font-size: 14px;
+    cursor: pointer; width: 100%;
+    color: #fff;
+    padding: 10px;
+}
+.CadCat .moderacao .tr2 .aprovar:hover{
+    background: linear-gradient(#94cc48,#8cdd1e);
+    background: -webkit-linear-gradient(#94cc48,#8cdd1e);
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+}
+.CadCat .moderacao .tr2 .bloqueado{
+     background: linear-gradient(#ffaa38,#e36d10);
+     background: -webkit-linear-gradient(#ffaa38,#e36d10);
+    border: none;
+    font-size: 14px;
+    cursor: pointer; width: 100%;
+    color: #fff;
+    padding: 10px;
+}
+.CadCat .moderacao .tr2 .bloqueado:hover{
+    background: linear-gradient(#d0831c,#e36d10);
+    background: -webkit-linear-gradient(#d0831c,#e36d10);
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+}
+.CadCat .moderacao .tr2 td{
+    font-size:14px;
+}
+

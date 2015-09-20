@@ -1,4 +1,5 @@
 <?php $pagename = "holofotes";   ?>
+<?php $titulo_header = "Personalidades";   ?>
 <?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
 <!DOCTYPE html>
 <html lang="pt-br">

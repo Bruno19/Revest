@@ -1,4 +1,5 @@
 <?php $pagename = "quem-somos";   ?>
+<?php $titulo_header = "Quem-somos";   ?>
 
 <?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
 <!DOCTYPE html>

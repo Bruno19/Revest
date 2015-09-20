@@ -1,4 +1,5 @@
 <?php $pagename = "holofotes";   ?>
+<?php $titulo_header = "Materias e artigos";   ?>
 <?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -59,7 +60,7 @@
 						?>
 						<div class="Unica_img_doacao">
 							<a href="cms/imagens/news/<?php echo $Doacao->image1_no;?>" data-rel="lightbox" style="text-decoration: none">
-								<img src="cms/imagens/news/<?php echo $Doacao->image1_no;?>" alt="<?php echo $Doacao->title_no;?>"/>
+								<img src="cms/imagens/news/<?php echo $Doacao->image1_no;?>" alt="<?php echo $Doacao->title_no;?>" width="790" height="406"/>
 							</a>
 						</div>
 						<?php }else{ ?>

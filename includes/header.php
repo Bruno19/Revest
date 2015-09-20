@@ -45,7 +45,7 @@
 									<li onclick="location.href='personalidades.php'">
 										<a href="personalidades.php">Personalidades IN CENA</a>
 									</li>
-									<li onclick="location.href=''">
+									<li onclick="location.href='materias.php'">
 										<a href="materias.php">Matérias e Artigos</a>
 									</li>
 									<li onclick="location.href='orgaos-do-setor.php'">
@@ -57,8 +57,8 @@
 									<li onclick="location.href='projetos.php'">
 										<a href="projetos.php">Projetos</a>
 									</li>
-                                    <li onclick="location.href='newslatter.php'">
-										<a href="newslatter.php">Newslatter</a>
+                                    <li onclick="location.href='newsletter.php'">
+										<a href="newsletter.php">Newsletter</a>
 									</li>
 								</ul>
 							</li>
@@ -92,7 +92,7 @@
 									<li onclick="location.href='personalidades.php'">
 										<a href="personalidades.php">Personalidades IN CENA</a>
 									</li>
-									<li onclick="location.href=''">
+									<li onclick="location.href='materias.php'">
 										<a href="materias.php">Matérias e Artigos</a>
 									</li>
 									<li onclick="location.href='orgaos-do-setor.php'">
@@ -104,8 +104,8 @@
 									<li onclick="location.href='projetos.php'">
 										<a href="projetos.php">Projetos</a>
 									</li>
-                                    <li onclick="location.href='newslatter.php'">
-										<a href="newslatter.php">Newslatter</a>
+                                           <li onclick="location.href='newsletter.php'">
+										<a href="newsletter.php">Newsletter</a>
 									</li>
 								</ul>
 							</li>
@@ -139,7 +139,7 @@
 									<li onclick="location.href='personalidades.php'">
 										<a href="personalidades.php">Personalidades IN CENA</a>
 									</li>
-									<li onclick="location.href=''">
+									<li onclick="location.href='materias.php'">
 										<a href="materias.php">Matérias e Artigos</a>
 									</li>
 									<li onclick="location.href='orgaos-do-setor.php'">
@@ -151,8 +151,8 @@
 									<li onclick="location.href='projetos.php'">
 										<a href="projetos.php">Projetos</a>
 									</li>
-                                    <li onclick="location.href='newslatter.php'">
-										<a href="newslatter.php">Newslatter</a>
+                                           <li onclick="location.href='newsletter.php'">
+										<a href="newsletter.php">Newsletter</a>
 									</li>
 								</ul>
 							</li>
@@ -187,8 +187,8 @@
 									<li onclick="location.href='personalidades.php'">
 										<a href="personalidades.php">Personalidades IN CENA</a>
 									</li>
-									<li onclick="location.href=''">
-										<a href="#">Matérias e Artigos</a>
+									<li onclick="location.href='materias.php'">
+										<a href="materias.php">Matérias e Artigos</a>
 									</li>
 									<li onclick="location.href='orgaos-do-setor.php'">
 										<a href="orgaos-do-setor.php">Orgãos do Setor</a>
@@ -199,8 +199,8 @@
 									<li onclick="location.href='projetos.php'">
 										<a href="projetos.php">Projetos</a>
 									</li>
-                                    <li onclick="location.href='newslatter.php'">
-										<a href="newslatter.php">Newslatter</a>
+                                      <li onclick="location.href='newsletter.php'">
+										<a href="newsletter.php">Newsletter</a>
 									</li>
 								</ul>
 							</li>
@@ -234,8 +234,8 @@
 									<li onclick="location.href='personalidades.php'">
 										<a href="personalidades.php">Personalidades IN CENA</a>
 									</li>
-									<li onclick="location.href=''">
-										<a href="#">Matérias e Artigos</a>
+									<li onclick="location.href='materias.php'">
+										<a href="materias.php">Matérias e Artigos</a>
 									</li>
 									<li onclick="location.href='orgaos-do-setor.php'">
 										<a href="orgaos-do-setor.php">Orgãos do Setor</a>
@@ -246,8 +246,8 @@
 									<li onclick="location.href='projetos.php'">
 										<a href="projetos.php">Projetos</a>
 									</li>
-                                    <li onclick="location.href='newslatter.php'">
-										<a href="newslatter.php">Newslatter</a>
+                                           <li onclick="location.href='newsletter.php'">
+										<a href="newsletter.php">Newsletter</a>
 									</li>
 								</ul>
                                 

@@ -1,4 +1,5 @@
 <?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
+<?php $titulo_header = "Aceito Doação";   ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -7,7 +8,22 @@
 	<body>
 		<?php include_once('includes/header.php');?>
 		<?php include_once('includes/menu.php');?>
-		
+            
+    <script>
+            function cad_solicitacao(){
+                
+                var solicitacao = $("solicitacao").val();
+                var nome = $("#nome").val();
+                var email = $("#email").val();
+                var texto = $("#texto").val();
+
+
+                $.post('processa.php',{solicitacao:"solicitacao",email:email,nome:nome,texto:texto}).done(function(resultado){
+                    $('.resposta').html(resultado);
+          
+                });
+        }
+        </script>
       
 		<div class="Centro FundoConteudo contato_overflow">
 			<img src="http://incena.esy.es/imagens/doacao.jpg" alt="Contato" class="Titulos TitulosGrandes right"/>
@@ -45,7 +61,7 @@
                 </center>
                    <label>Tel.: 11 9999.9999</label>
                 
-                    <input type="button" value="Enviar" class="btn" onclick="enviar_email()">
+                    <input type="button" value="Enviar" class="btn" onclick="cad_solicitacao()">
                </form>
               
                      <div class="resposta"></div> 
@@ -83,7 +99,7 @@
 
 
 
-
+ 
 
 
 

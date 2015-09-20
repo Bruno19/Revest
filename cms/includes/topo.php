@@ -51,6 +51,12 @@
 							<li>
 								<a href="noticia.php?action=list&type=donation">Doações Cadastradas</a>
 							</li>
+							<li>
+								<a href="aprovar_doacao.php">Moderar Doações</a>
+							</li>							
+							<li>
+								<a href="aprovar_solicitacao.php">Moderar Solicitações</a>
+							</li>
 						</ul>
 					</li>
 					<li>

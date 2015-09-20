@@ -9818,20 +9818,19 @@ CREATE TABLE IF NOT EXISTS `doacao` (
   `msg` text NOT NULL,
   `aprovado` int(10) NOT NULL,
   PRIMARY KEY (`id_doacao`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Extraindo dados da tabela `doacao`
 --
 
 INSERT INTO `doacao` (`id_doacao`, `nome`, `email`, `msg`, `aprovado`) VALUES
-(1, '$nome', '$email', '$texto', 0),
-(2, '$nome', '$email', '$texto', 0),
-(3, '', '', '', 0),
-(4, 'teste', 'teste1', 'teste23', 0),
-(5, '', '', '', 2),
-(6, '', '', '', 2),
-(7, '', '', '', 2);
+(12, 'Alberto', 'alberto@bol.com.br', 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ', 1),
+(13, 'Bruno', 'Bruno@bol.com.br', 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ', 1),
+(14, 'Carlos', 'Carlos@bol.com.br', 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ', 1),
+(15, 'Darlan', 'Darlan@bol.com.br', 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ', 1),
+(16, 'Amanda', 'Amanda@bol.com.br', 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ', 1),
+(17, 'asdas', 'teste@teste.com.br', 'dasd', 2);
 
 -- --------------------------------------------------------
 
@@ -10230,6 +10229,33 @@ INSERT INTO `publicidade` (`id_p`, `name_p`, `image_p`, `url_p`) VALUES
 (2, 'topo2', '99105ad5cf8f81af616147e700c4b436.jpg', 'http://teste.com.br'),
 (3, 'topo3', '9d4bfc496d9b5c421cb1aa7a4a6fd251.jpg', 'http://teste.com.br'),
 (4, 'centro1', '847c67996ecfa90a2d0224fb62042913.jpg', '#teste');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `solicitacao`
+--
+
+CREATE TABLE IF NOT EXISTS `solicitacao` (
+  `id_solicita` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(150) NOT NULL,
+  `email` varchar(150) NOT NULL,
+  `msg` text NOT NULL,
+  `aprovado` int(2) NOT NULL,
+  PRIMARY KEY (`id_solicita`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Extraindo dados da tabela `solicitacao`
+--
+
+INSERT INTO `solicitacao` (`id_solicita`, `nome`, `email`, `msg`, `aprovado`) VALUES
+(1, 'teste', 'teste123', 'testeeeeeeeeeeeeeee', 1),
+(2, 'dasdasda', 'asdasdsad', 'asdasdas', 2),
+(3, 'asdas', 'Dasdas', 'dasdas', 2),
+(5, 'asd', 'aasdasdas', 'asd', 1),
+(6, 'asd', 'asdasds', 'asdsda', 1),
+(7, 'asd', 'asdasdas@teste.com.br', 'asd', 1);
 
 -- --------------------------------------------------------
 

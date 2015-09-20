@@ -1,4 +1,5 @@
 <?php include_once('cms/php/conn.php'); mysqli_set_charset($conn, "utf8");?>
+<?php $titulo_header = "Solicitações e Doações";   ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -20,26 +21,30 @@
                      </div>
                      
                      
+                 <?php
+                    $conn = @mysql_connect('localhost', 'root', '', 'incena')or die(mysql_errno());
+                    @mysql_select_db('incena');
+
+                    $query = "SELECT * FROM solicitacao ORDER BY nome ASC";
+                    $executa = mysql_query($query);  
+                    
+                        while($dados = mysql_fetch_array($executa)){
+                                                         
+                            $nome = $dados['nome'];                     
+                            $email = $dados['email'];                     
+                            $msg = $dados['msg'];                     
+                            $aprovado = $dados['aprovado'];                     
+                                          
+                                                
+                            if($aprovado == 1){
+                ?>                     
                      <div class="resultados">
-                         <b> Jõao de oliveira soares </b><br />
-                            Porcelanatos<br />
-                            joaosoareaoliveira@hotmail.com.br: <br />
+                         <b> <?php echo $nome; ?> </b><br />
+                            <?php echo $email; ?><br />
                             www.incena.com.br<br />
-                     </div>                     
+                     </div>  
                      
-                     <div class="resultados">
-                         <b> Jõao de oliveira soares </b><br />
-                            Porcelanatos<br />
-                            joaosoareaoliveira@hotmail.com.br: <br />
-                            www.incena.com.br<br />
-                     </div>                     
-                     
-                     <div class="resultados">
-                         <b> Jõao de oliveira soares </b><br />
-                            Porcelanatos<br />
-                            joaosoareaoliveira@hotmail.com.br: <br />
-                            www.incena.com.br<br />
-                     </div>
+                <?php }} ?> 
             </div>
             
                 <div class="solicita">
@@ -47,27 +52,30 @@
                             <a href="">Solicitações</a>
                      </div>
                      
-                     
+                <?php
+          
+
+                    $query = "SELECT * FROM doacao ORDER BY nome ASC";
+                    $executa = mysql_query($query);  
+                    
+                        while($dados = mysql_fetch_array($executa)){
+                                                         
+                            $nome = $dados['nome'];                     
+                            $email = $dados['email'];                     
+                            $msg = $dados['msg'];                     
+                            $aprovado = $dados['aprovado'];                     
+                            $id = $dados['id_doacao'];                     
+                                                
+                            if($aprovado == 1){
+                ?>                     
                      <div class="resultados">
-                         <b> Jõao de oliveira soares </b><br />
-                            Porcelanatos<br />
-                            joaosoareaoliveira@hotmail.com.br: <br />
+                         <b> <?php echo $nome; ?> </b><br />
+                            <?php echo $email; ?><br />
                             www.incena.com.br<br />
-                     </div>                     
+                     </div>  
                      
-                     <div class="resultados">
-                         <b> Jõao de oliveira soares </b><br />
-                            Porcelanatos<br />
-                            joaosoareaoliveira@hotmail.com.br: <br />
-                            www.incena.com.br<br />
-                     </div>                     
-                     
-                     <div class="resultados">
-                         <b> Jõao de oliveira soares </b><br />
-                            Porcelanatos<br />
-                            joaosoareaoliveira@hotmail.com.br: <br />
-                            www.incena.com.br<br />
-                     </div>
+                <?php }} ?>                   
+    
                 </div>
             </div>
 
