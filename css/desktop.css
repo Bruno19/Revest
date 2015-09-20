@@ -193,55 +193,71 @@ nav {
     width: 30%;
 }
 .f1 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/prof.png") no-repeat scroll 0 0 / 120% 120%;
+    background: url("../imagens/icones/job.jpg")no-repeat; display: block; width: 29px; height: 30px;;
+    background-position: 5px -4px;
 }
 .f2 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/fabr.png") no-repeat scroll 0 0 / 120% 110%;
+    background: url("../imagens/icones/predio.jpg")no-repeat; display: block; width: 29px; height: 30px;;
+    background-position: 5px -7px;
 }
 .f3 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/lojas.png") no-repeat scroll 0 0 / 120% 120%;
+    background: url("../imagens/icones/lojas.jpg")no-repeat; display: block; width: 29px; height: 30px;;
+    background-position: 5px -3px;
 }
 .f4 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/tec.png") no-repeat scroll 0 0 / 120% 120%;
+    background: url("../imagens/icones/pessoa.jpg")no-repeat; display: block; width: 120px; height: 30px;;
+    background-position: 5px -3px; 
 }
 .f5 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/ofer.png") no-repeat scroll 0 0 / 120% 120%;
+    background: url("../imagens/icones/dolar.jpg")no-repeat; display: block; width: 29px; height: 30px;;
+    background-position: 5px -3px;
 }
 .f6 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/even.png") no-repeat scroll 0 0 / 120% 120%;
+     background: url("../imagens/icones/calendario.jpg")no-repeat; display: block; width: 29px; height: 30px;;
+    background-position: 5px -2px;
 }
 .f7 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/doa.png") no-repeat scroll 0 0 / 110% 110%;
+    background: url("../imagens/icones/mao.jpg")no-repeat; display: block; width: 38px; height: 30px;;
+    background-position: 5px -8px;
 }
 .f8 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/down.png") no-repeat scroll 0 0 / 120% 120%;
+    background: url("../imagens/icones/dowload.jpg")no-repeat; display: block; width: 38px; height: 30px;;
+    background-position: 5px -8px;
 }
 .ListaSubMenu li a:hover {
     color: #fdd631;
 }
 .ListaSubMenu li a:hover .f1 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/prof_h.png") no-repeat scroll 0 0 / 120% 120%;
+    background: url("../imagens/icones/job.jpg")no-repeat; display: block; width: 29px; height: 30px;;
+    background-position: 5px -32px;
 }
 .ListaSubMenu li a:hover .f2 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/fabr_h.png") no-repeat scroll 0 0 / 120% 110%;
+    background: url("../imagens/icones/predio.jpg")no-repeat; display: block; width: 29px; height: 30px;;
+    background-position: 5px -33px;
 }
 .ListaSubMenu li a:hover .f3 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/lojas_h.png") no-repeat scroll 0 0 / 120% 120%;
+    background:  url("../imagens/icones/lojas.jpg")no-repeat; display: block; width: 29px; height: 30px;;
+    background-position: 5px -31px;
 }
 .ListaSubMenu li a:hover .f4 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/tec_h.png") no-repeat scroll 0 0 / 120% 120%;
+    background: url("../imagens/icones/pessoa.jpg")no-repeat; display: block; width: 120px; height: 30px;;
+    background-position: 5px -31px; 
 }
 .ListaSubMenu li a:hover .f5 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/ofer_h.png") no-repeat scroll 0 0 / 120% 120%;
+    background: url("../imagens/icones/dolar.jpg")no-repeat; display: block; width: 29px; height: 30px;;
+    background-position: 5px -31px;
 }
 .ListaSubMenu li a:hover .f6 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/even_h.png") no-repeat scroll 0 0 / 120% 120%;
+      background: url("../imagens/icones/calendario.jpg")no-repeat; display: block; width: 29px; height: 30px;;
+    background-position: 5px -31px;
 }
 .ListaSubMenu li a:hover .f7 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/doa_h.png") no-repeat scroll 0 0 / 110% 110%;
+    background: url("../imagens/icones/mao.jpg")no-repeat; display: block; width: 38px; height: 28px;;
+    background-position: 5px -34px;
 }
 .ListaSubMenu li a:hover .f8 {
-    background: rgba(0, 0, 0, 0) url("../imagens/icones/down_h.png") no-repeat scroll 0 0 / 120% 120%;
+    background: url("../imagens/icones/dowload.jpg")no-repeat; display: block; width: 38px; height: 30px;;
+    background-position: 5px -34px;
 }
 .NoticiaDestaque1 {
     height: 498px;

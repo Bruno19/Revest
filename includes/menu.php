@@ -31,7 +31,7 @@
 				<li>
 					<a href="tecnicos.php">
 						<div class="FundoSubMenu f4" style="width: 27%;"></div>
-						<div class="TextoMenu" style="width: 70%;">
+						<div class="TextoMenu" style="width: 72%;">
 							Grupo técnico<br/>
 							IN CENA
 						</div>
