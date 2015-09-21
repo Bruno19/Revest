@@ -82,13 +82,28 @@
                 </tr> 
 
                 <?php
-                    $conn = @mysql_connect('localhost', 'root', '', 'incena')or die(mysql_errno());
-                    @mysql_select_db('incena');
-
-                    $query = "SELECT * FROM solicitacao ORDER BY id_solicita DESC";
-                    $executa = mysql_query($query);  
                     
-                        while($dados = mysql_fetch_array($executa)){
+					$SelectRows = mysqli_query($conn, "SELECT * FROM solicitacao");					
+					$Quant = 10;
+					$Rows = mysqli_num_rows($SelectRows);
+			
+					$Pgs = ceil($Rows/$Quant);
+					
+					if(isset($_GET['pg'])){
+						$Page = $_GET['pg'];
+						if($Page>0 && is_numeric($Page)==true){
+							$Limit = ($Page-1)*$Quant;
+						}else{
+							$Limit=0;
+						}
+					}else{
+						$Limit=0;
+					}
+
+                    $query = "SELECT * FROM solicitacao ORDER BY id_solicita DESC LIMIT $Limit, $Quant";
+                    $executa = mysqli_query($conn, $query);  
+                    
+                        while($dados = mysqli_fetch_array($executa)){
                                                          
                             $nome = $dados['nome'];                     
                             $email = $dados['email'];                     
@@ -131,10 +146,53 @@
                     </tr>
                 
                 <?php } ?>
-                
-                              
-                                            
-                                                                        
+                <tr>
+					<th colspan="6">
+						<?php
+							if(isset($_GET['pg']) && is_numeric($_GET['pg'])==true){
+								if($_GET['pg']>2){
+									echo '<a href="?pg='.($_GET['pg']-1).'">&lsaquo;</a>';
+								}else{
+									echo '<a href="?pg=1">&lsaquo;</a>';
+								}
+							}else{
+								echo '<a href="?pg=1">&lsaquo;</a>';
+							}
+						?>
+
+						&nbsp;
+						<?php
+							if(isset($_GET['pg']) && is_numeric($_GET['pg'])==true){
+								if($_GET['pg']==$Pgs){
+									echo '<a href="?pg='.($Pgs).'">';
+								}else{
+									echo '<a href="?pg='.($_GET['pg']+1).'">';
+								}
+							}else{
+								echo '<a href="?pg=2">';
+							}
+						?>Pag 
+								<?php
+									if(isset($_GET['pg']) && is_numeric($_GET['pg'])==true){
+										echo $_GET['pg'].'/'.$Pgs;
+									}else{
+										echo '1/'.$Pgs;
+									}
+								?>
+							</a>&nbsp;
+						<?php
+							if(isset($_GET['pg']) && is_numeric($_GET['pg'])==true){
+								if($_GET['pg']==$Pgs){
+									echo '<a href="?pg='.($Pgs).'">&rsaquo;</a>';
+								}else{
+									echo '<a href="?pg='.($_GET['pg']+1).'">&rsaquo;</a>';
+								}
+							}else{
+								echo '<a href="?pg=2">&rsaquo;</a>';
+							}
+						?>
+					</th>
+				</tr>                                                                 
             </tbody>
         </table>
     </div>

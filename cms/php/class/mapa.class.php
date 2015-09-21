@@ -193,7 +193,7 @@
 		
 		function LoadMapping($Conn, $Id, $Area){
 			mysqli_set_charset($Conn, "utf8");
-			$Select = mysqli_query($Conn, "SELECT * FROM mapping WHERE id_ci=$Id AND area_ma=$Area ORDER BY id_ma DESC")or die(mysqli_error($Conn));
+			$Select = mysqli_query($Conn, "SELECT * FROM mapping WHERE id_ci=$Id AND area_ma=$Area ORDER BY name_ma ASC")or die(mysqli_error($Conn));
 			if(mysqli_num_rows($Select)>0){
 				while($Mapping=mysqli_fetch_object($Select)){
 					echo '
@@ -216,7 +216,7 @@
 		
 		function LoadMapUf($Conn, $Uf, $Area){
 			mysqli_set_charset($Conn, "utf8");
-			$Select = mysqli_query($Conn, "SELECT * FROM mapping WHERE uf_ma='$Uf' AND area_ma=$Area ORDER BY id_ma DESC")or die(mysqli_error($Conn));
+			$Select = mysqli_query($Conn, "SELECT * FROM mapping WHERE uf_ma='$Uf' AND area_ma=$Area ORDER BY name_ma ASC")or die(mysqli_error($Conn));
 			if(mysqli_num_rows($Select)>0){
 				while($Mapping=mysqli_fetch_object($Select)){
 					echo '

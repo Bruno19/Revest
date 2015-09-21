@@ -563,7 +563,7 @@ footer{
 
 .Partner{
 	width: 205px;
-	height: 150px;
+	height: 350px;
 	float: left;
 	margin-bottom: 20px;
 	text-align: center;
@@ -697,3 +697,27 @@ footer{
     font-size:14px;
 }
 
+.BtnImageEdit{
+	width: 90%;
+	height: auto;
+	margin: auto;
+	position: relative;
+	padding: 5px 0;
+	overflow: hidden;
+	cursor: pointer;
+	background: #333;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.BtnImageEdit input{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	opacity: 0;
+	cursor: pointer;
+}
