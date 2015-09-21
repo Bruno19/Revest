@@ -244,8 +244,8 @@
 			</a>
 			<?php endwhile;?>
 			
-			<div class="OutrasNoticias right BackGold">
-				<div class="Doacao">
+			<div class="OutrasNoticias right BackGold">				
+				<div class="BlocoDoacaoHome">
 					<h2>Doação IN CENA</h2>
 					<?php
 						$SelectDonation = mysqli_query($conn, "SELECT id_no, title_no FROM news WHERE type_no=2 ORDER BY id_no DESC");

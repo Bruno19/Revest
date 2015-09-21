@@ -314,15 +314,15 @@ nav {
     background: #dbbd39 none repeat scroll 0 0;
     height: 190px;
 }
-.BackGold .Doacao {
+.BackGold .BlocoDoacaoHome {
     padding: 10px;
 }
-.BackGold .Doacao h2 {
+.BackGold .BlocoDoacaoHome h2 {
     color: #383838;
     font-size: 20px;
     font-weight: 100;
 }
-.BackGold .Doacao a {
+.BackGold .BlocoDoacaoHome a {
     color: #fff;
     font-size: 16px;
     text-decoration: none;
@@ -634,7 +634,7 @@ nav {
 .FundoConteudo .doacao .centraliza_doacao .galeria_doacao {
     background: #f5d039 none repeat scroll 0 0;
     float: left;
-    height: 405px;
+    height: auto;
     margin-top: 10px;
     position: relative;
     width: 790px;
