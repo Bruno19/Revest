@@ -1,9 +1,7 @@
 <?php
 
-	$conn = @mysql_connect('localhost', 'root', '', 'incena')or die(mysql_errno());
+	$conn = @mysql_connect('mysql.hostinger.com.br', 'u913525276_incen', '8x8bw0bxpd', 'u913525276_incen')or die(mysql_errno());
 	@mysql_select_db('incena');
-	
-
 
 
     if(isset($_POST['enviar_pro_email'])){
@@ -143,7 +141,7 @@ if(isset($_POST['aprovar_pedido'])){
 
         $id = $_POST["id"];
   
-        $query = " UPDATE  `incena`.`doacao` SET  `aprovado` =  '1' WHERE  `doacao`.`id_doacao` = $id";
+        $query = " UPDATE  `u913525276_incen`.`doacao` SET  `aprovado` =  '1' WHERE  `doacao`.`id_doacao` = $id";
         $executa = mysql_query($query);
 
 
@@ -154,7 +152,7 @@ if(isset($_POST['bloquear_pedido'])){
 
         $id = $_POST["id"];
   
-        $query = " UPDATE  `incena`.`doacao` SET  `aprovado` =  '2' WHERE  `doacao`.`id_doacao` = $id";
+        $query = " UPDATE  `u913525276_incen`.`doacao` SET  `aprovado` =  '2' WHERE  `doacao`.`id_doacao` = $id";
         $executa = mysql_query($query);
 
    }
@@ -201,7 +199,7 @@ if(isset($_POST['aprovar_solicitacao'])){
 
         $id = $_POST["id"];
   
-        $query = " UPDATE  `incena`.`solicitacao` SET  `aprovado` =  '1' WHERE  `solicitacao`.`id_solicita` = $id";
+        $query = " UPDATE  `u913525276_incen`.`solicitacao` SET  `aprovado` =  '1' WHERE  `solicitacao`.`id_solicita` = $id";
         $executa = mysql_query($query);
 
 
@@ -212,7 +210,7 @@ if(isset($_POST['bloquearsolicitacao'])){
 
         $id = $_POST["id"];
   
-        $query = " UPDATE  `incena`.`solicitacao` SET  `aprovado` =  '2' WHERE  `solicitacao`.`id_solicita` = $id";
+        $query = " UPDATE  `u913525276_incen`.`solicitacao` SET  `aprovado` =  '2' WHERE  `solicitacao`.`id_solicita` = $id";
         $executa = mysql_query($query);
 
    }
