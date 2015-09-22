@@ -44,7 +44,20 @@
                             <div class="bloco_pesquisa"><label>Pesquisa</label></div>
                         </div>
                     
-                    <div class="galeria_doacao">						
+                    <div class="galeria_doacao">
+                        <?php
+							if($Doacao->image2_no=='none.jpg' && $Doacao->image3_no=='none.jpg' && $Doacao->image4_no=='none.jpg'){
+						?>
+                        
+						<div class="Unica_img_doacao">
+							<a href="cms/imagens/news/<?php echo $Doacao->image1_no;?>" data-rel="lightbox" style="text-decoration: none">
+								<?php if($Doacao->image1_no!='none.jpg'):?>
+									<img src="cms/imagens/news/<?php echo $Doacao->image1_no;?>" alt="<?php echo $Doacao->title_no;?>" width="790" height="406"/>
+								<?php endif;?>
+							</a>
+						</div>
+                        
+						<?php }else{ ?>
                         <div class="imgs_doacao">
 							<a href="cms/imagens/news/<?php echo $Doacao->image1_no;?>" data-rel="lightbox" style="text-decoration: none">
 								<img src="cms/imagens/news/<?php echo $Doacao->image1_no;?>" alt="<?php echo $Doacao->title_no;?>"/>
@@ -65,6 +78,7 @@
 								<img src="cms/imagens/news/<?php echo $Doacao->image4_no;?>" alt="<?php echo $Doacao->title_no;?>"/>
 							</a>
 						</div>
+                        <?php } ?>
                     </div>
                     
                     <div class="texto_doacao">
