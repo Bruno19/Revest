@@ -90,7 +90,7 @@
 			</a>
                        <?php endif;?>
 		<?php 
-			$SelectNoticias1 = mysqli_query($conn, "SELECT id_no, title_no, image1_no FROM news WHERE type_no=1 ORDER BY id_no DESC LIMIT $Limite, 4");
+			$SelectNoticias1 = mysqli_query($conn, "SELECT id_no, title_no, image1_no FROM news WHERE type_no=1 AND featured_no=0 ORDER BY id_no DESC LIMIT $Limite, 4");
 			while($Dados1=mysqli_fetch_object($SelectNoticias1)):
 		?>	
 			<a href="materias.php?id=<?php echo $Dados1->id_no;?>" target="_blank" style="text-decoration: none">
@@ -203,7 +203,7 @@
 			?>
 			<?php
 				$l1 = $Limite+4;
-				$SelectNoticias2 = mysqli_query($conn, "SELECT id_no, title_no, image1_no FROM news WHERE type_no=1 ORDER BY id_no DESC LIMIT $l1, 2")or die(mysqli_error($conn));
+				$SelectNoticias2 = mysqli_query($conn, "SELECT id_no, title_no, image1_no FROM news WHERE type_no=1 AND featured_no=0 ORDER BY id_no DESC LIMIT $l1, 2")or die(mysqli_error($conn));
 				while($Dados2=mysqli_fetch_object($SelectNoticias2)):
 			?>
 			<a href="materias.php?id=<?php echo $Dados2->id_no;?>" target="_blank" style="text-decoration: none">
@@ -225,7 +225,7 @@
 			<div class="esp"></div>
 			<?php 
 				$l2 = $Limite+6;
-				$SelectNoticias3 = mysqli_query($conn, "SELECT id_no, title_no, image1_no FROM news WHERE type_no=1 ORDER BY id_no DESC LIMIT $l2, 2")or die(mysqli_error($conn));
+				$SelectNoticias3 = mysqli_query($conn, "SELECT id_no, title_no, image1_no FROM news WHERE type_no=1 AND featured_no=0 ORDER BY id_no DESC LIMIT $l2, 2")or die(mysqli_error($conn));
 				while($Dados3=mysqli_fetch_object($SelectNoticias3)):
 			?>			
 			<a href="materias.php?id=<?php echo $Dados3->id_no;?>" target="_blank" style="text-decoration: none">
@@ -267,7 +267,7 @@
 			
 			<?php
 				$l3 = $Limite+8;
-				$SelectNoticias4 = mysqli_query($conn, "SELECT id_no, title_no, image1_no FROM news WHERE type_no=1 ORDER BY id_no DESC LIMIT $l3, 2")or die(mysqli_error($conn));
+				$SelectNoticias4 = mysqli_query($conn, "SELECT id_no, title_no, image1_no FROM news WHERE type_no=1 AND featured_no=0 ORDER BY id_no DESC LIMIT $l3, 2")or die(mysqli_error($conn));
 				while($Dados4=mysqli_fetch_object($SelectNoticias4)):
 			?>			
 			<a href="materias.php?id=<?php echo $Dados4->id_no;?>" target="_blank" style="text-decoration: none">
@@ -301,7 +301,7 @@
 			
 			<?php
 				$l4 = $Limite+10;
-				$SelectNoticias5 = mysqli_query($conn, "SELECT id_no, title_no, image1_no FROM news WHERE type_no=1 ORDER BY id_no DESC LIMIT $l4, 3")or die(mysqli_error($conn));
+				$SelectNoticias5 = mysqli_query($conn, "SELECT id_no, title_no, image1_no FROM news WHERE type_no=1 AND featured_no=0 ORDER BY id_no DESC LIMIT $l4, 3")or die(mysqli_error($conn));
 				while($Dados5=mysqli_fetch_object($SelectNoticias5)):
 			?>			
 			<a href="materias.php?id=<?php echo $Dados5->id_no;?>" target="_blank" style="text-decoration: none">
