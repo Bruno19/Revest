@@ -11,8 +11,7 @@
 	</head>
 	<body>
 		<?php include_once('includes/header.php');?>
-		<?php include_once('includes/menu.php');?>
-        
+		<?php include_once('includes/menu.php');?>        
 		<?php
 			$SelectAllNews = mysqli_query($conn, "SELECT id_no FROM news WHERE type_no=1");
 			$NoticiasPorPagina = 1;

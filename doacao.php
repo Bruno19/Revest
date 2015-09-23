@@ -11,7 +11,17 @@
 	<body>
 		<?php include_once('includes/header.php');?>
 		<?php include_once('includes/menu.php');?>
-        <?php			
+        <?php
+			$SelectAllNews = mysqli_query($conn, "SELECT id_no FROM news WHERE type_no=2");
+			$NoticiasPorPagina = 1;
+			$Pages = ceil(mysqli_num_rows($SelectAllNews)/1);
+			
+			if(isset($_GET['pg']) && is_numeric($_GET['pg'])==true){
+				$Limite = ($_GET['pg']-1)*$NoticiasPorPagina;
+			}else{
+				$Limite=0;
+			}
+			
 			include_once('cms/php/escapeSQL.php');
 			if(isset($_GET['id']) && $_GET['id']!=null){
 				$get = LimparGeral($_GET);				
@@ -22,7 +32,7 @@
 					exit;
 				}
 			}else{
-				$SelectDoacao = mysqli_query($conn, "SELECT * FROM news WHERE type_no=2 ORDER BY id_no DESC");
+				$SelectDoacao = mysqli_query($conn, "SELECT * FROM news WHERE type_no=2 ORDER BY id_no DESC LIMIT $Limite, 1");
 				if(mysqli_num_rows($SelectDoacao)>0){
 					$Doacao = mysqli_fetch_object($SelectDoacao);
 				}else{
@@ -95,9 +105,49 @@
 
             
             <div class="PaginadorHome">
-                <a href="#">‹</a>
-                <a href="#">Pag 1/9</a>
-                <a href="#">›</a>
+               <?php
+					if(isset($_GET['pg']) && is_numeric($_GET['pg'])==true){
+						if($_GET['pg']>2){
+							echo '<a href="?pg='.($_GET['pg']-1).'">&lsaquo;</a>';
+						}else{
+							echo '<a href="?pg=1">&lsaquo;</a>';
+						}
+					}else{
+						echo '<a href="?pg=1">&lsaquo;</a>';
+					}
+				?>
+
+				&nbsp;
+				<?php
+					if(isset($_GET['pg']) && is_numeric($_GET['pg'])==true){
+						if($_GET['pg']==$Pages){
+							echo '<a href="?pg='.($Pages).'">';
+						}else{
+							echo '<a href="?pg='.($_GET['pg']+1).'">';
+						}
+					}else{
+						echo '<a href="?pg=2">';
+					}
+				?>Pag 
+						<?php
+							if(isset($_GET['pg']) && is_numeric($_GET['pg'])==true){
+								echo $_GET['pg'].'/'.$Pages;
+							}else{
+								echo '1/'.$Pages;
+							}
+						?>
+					</a>&nbsp;
+				<?php
+					if(isset($_GET['pg']) && is_numeric($_GET['pg'])==true){
+						if($_GET['pg']==$Pages){
+							echo '<a href="?pg='.($Pages).'">&rsaquo;</a>';
+						}else{
+							echo '<a href="?pg='.($_GET['pg']+1).'">&rsaquo;</a>';
+						}
+					}else{
+						echo '<a href="?pg=2">&rsaquo;</a>';
+					}
+				?>
             </div>
             
             
