@@ -158,7 +158,22 @@
 				while($Date=mysqli_fetch_object($Select)){
 					echo '
 						<div class="BlocoImagem">
-							<img src="imagens/projetos/'.$Date->name_im.'" alt="'.$Date->text_im.'" /><br/>						
+							<img src="imagens/projetos/'.$Date->name_im.'" alt="'.$Date->text_im.'" /><br/>
+								
+							<form name="editpartner" method="post" enctype="multipart/form-data" action="">
+								<input type="hidden" name="alter-parter" value="ok" />
+								<input type="hidden" name="id" value="'.$Date->id_im.'" />
+								<input type="hidden" name="name"" value="'.$Date->name_im.'" />
+								<div class="BtnImageEdit">
+									Alterar Imagem
+									<input type="file" name="imagem" class="Campo Btn CadEmp"/>
+								</div>
+								<br/>
+								<input type="text" name="linkimage" value="'.$Date->text_im.'" class="Campo"/><br/>
+								<input type="submit" value="Salvar" class="Campo Btn CadEmp AlterDs"/>
+							</form>
+							<br/><br/>
+							
 							<form name="del" method="post" onsubmit="return confirm('."'".'Deseja mesmo fazer isto?'."'".')" action="">
 								<input type="hidden" name="action" value="delete"/>
 								<input type="hidden" name="id" value="'.$Date->id_im.'"/>

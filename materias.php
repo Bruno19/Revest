@@ -53,6 +53,8 @@
 
 						<div class="bloco_pesquisa"><label>Pesquisa</label></div>
 					</div>
+					<div class="esp"></div>
+					<br/>
                     <div class="galeria_doacao">
 						<?php
 							if($Doacao->image2_no=='none.jpg' && $Doacao->image3_no=='none.jpg' && $Doacao->image4_no=='none.jpg'){
@@ -94,6 +96,7 @@
 						</div>
 						<?php endif;?>
 						<?php } ?>
+						<div class="esp"></div>
                     </div>
                     
                     <div class="texto_doacao">

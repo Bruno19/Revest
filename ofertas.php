@@ -14,8 +14,17 @@
             
          
             <div class="ofertas">
-                <?php 
-					$SelectPerson = mysqli_query($conn, "SELECT * FROM product WHERE type_pro=1 ORDER BY featured_pro DESC");
+                <?php
+					
+					if(isset($_GET['id'])){
+						if(is_numeric($_GET['id'])){
+							$SelectPerson = mysqli_query($conn, "SELECT * FROM product WHERE type_pro=1 AND id_pro=$_GET[id] ORDER BY featured_pro DESC");
+						}else{
+							$SelectPerson = mysqli_query($conn, "SELECT * FROM product WHERE type_pro=1 ORDER BY featured_pro DESC");
+						}
+					}else{
+						$SelectPerson = mysqli_query($conn, "SELECT * FROM product WHERE type_pro=1 ORDER BY featured_pro DESC");
+					}					
 					while($Person=mysqli_fetch_object($SelectPerson)):
 				?>
                 <div class="bloc_ofertas">
@@ -36,13 +45,14 @@
                 <?php endwhile;?>
             </div>
 
+			<!--
             
             <div class="PaginadorHome">
                 <a href="#">‹</a>
                 <a href="#">Pag 1/9</a>
                 <a href="#">›</a>
             </div>
-            
+            -->
             
         </div>
         

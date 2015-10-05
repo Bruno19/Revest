@@ -7,7 +7,7 @@
 			$('.resp').html('<label class="erro">O campo Título deve possuir de 3 a 120 caracteres!</label>');
 			c.title.focus();
 			return false;
-		}else
+		}/*else
 		if(c.subtitle.value>100){
 			$('.resp').html('<label class="erro">O campo Subtítulo deve possuir no máximo 100 caracteres!</label>');
 			c.subtitle.focus();
@@ -32,7 +32,7 @@
 			$('.resp').html('<label class="erro">O campo Descrição deve possuir no mínimo 20 caracteres!</label>');
 			c.content.focus();
 			return false;
-		}
+		}*/
 	}
 	$(document).ready(function() {  
 		   var options = {  

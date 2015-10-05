@@ -28,7 +28,26 @@
 							<button onclick="CarregarResultados(document.selectcidades.cidade.value)">Pesquisar</button>
                         </form>
 						<div class="ResultBusca">
-							&nbsp;                     
+							&nbsp;   
+							<?php
+								if(isset($_GET)){
+									if(is_numeric($_GET['id'])){
+										
+										$SelectMap = mysqli_query($conn, "SELECT * FROM mapping WHERE id_ma=$_GET[id]");
+										if(mysqli_num_rows($SelectMap)>0){
+											$Mapping = mysqli_fetch_object($SelectMap);
+											echo'
+												<div class="resultados">
+													<b>'.$Mapping->name_ma.'</b> <br> 
+													  '.$Mapping->info_ma.' <br> 
+														'.$Mapping->cont1_ma.' <br> 
+														'.$Mapping->cont2_ma.'
+												</div>
+											';
+										}										
+									}									
+								}
+							?>
                         </div>                         
                     </div>
 				<div class="esp"></div>					

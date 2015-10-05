@@ -142,9 +142,9 @@
 			<div class="ListaUltimosCadastradosH left">
 				<h2>Profissionais IN CENA</h2>
 				<?php 
-					$SelectMapping1=mysqli_query($conn, "SELECT name_ma FROM mapping WHERE area_ma=1 ORDER BY id_ma DESC LIMIT 0, 3");
+					$SelectMapping1=mysqli_query($conn, "SELECT * FROM mapping WHERE area_ma=1 ORDER BY id_ma DESC LIMIT 0, 3");
 					while($Mapping1=mysqli_fetch_object($SelectMapping1)){
-						echo '<a href="profissionais.php" >'.$Mapping1->name_ma.'</a><br/>';
+						echo '<a href="profissionais.php?id='.$Mapping1->id_ma.'" >'.$Mapping1->name_ma.'</a><br/>';
 					}
 				?>
 			</div>
@@ -152,9 +152,9 @@
 			<div class="ListaUltimosCadastradosH left">
 				<h2>Fabricantes IN CENA</h2>
 				<?php 
-					$SelectMapping2=mysqli_query($conn, "SELECT name_ma FROM mapping WHERE area_ma=2 ORDER BY id_ma DESC LIMIT 0, 3");
+					$SelectMapping2=mysqli_query($conn, "SELECT * FROM mapping WHERE area_ma=2 ORDER BY id_ma DESC LIMIT 0, 3");
 					while($Mapping2=mysqli_fetch_object($SelectMapping2)){
-						echo '<a href="fabricantes.php" >'.$Mapping2->name_ma.'</a><br/>';
+						echo '<a href="fabricantes.php?id='.$Mapping2->id_ma.'" >'.$Mapping2->name_ma.'</a><br/>';
 					}
 				?>
 			</div>
@@ -162,9 +162,9 @@
 			<div class="ListaUltimosCadastradosH left">
 				<h2>Lojas IN CENA</h2>
 				<?php 
-					$SelectMapping3=mysqli_query($conn, "SELECT name_ma FROM mapping WHERE area_ma=3 ORDER BY id_ma DESC LIMIT 0, 3");
+					$SelectMapping3=mysqli_query($conn, "SELECT * FROM mapping WHERE area_ma=3 ORDER BY id_ma DESC LIMIT 0, 3");
 					while($Mapping3=mysqli_fetch_object($SelectMapping3)){
-						echo '<a href="lojas.php" >'.$Mapping3->name_ma.'</a><br/>';
+						echo '<a href="lojas.php?id='.$Mapping3->id_ma.'" >'.$Mapping3->name_ma.'</a><br/>';
 					}
 				?>
 			</div>
@@ -172,9 +172,9 @@
 			<div class="ListaUltimosCadastradosH left">
 				<h2>Ofertas IN CENA</h2>
 				<?php 
-					$SelectMapping4=mysqli_query($conn, "SELECT title_pro FROM product WHERE type_pro=1 ORDER BY id_pro DESC LIMIT 0, 3");
+					$SelectMapping4=mysqli_query($conn, "SELECT * FROM product WHERE type_pro=1 ORDER BY id_pro DESC LIMIT 0, 3");
 					while($Mapping4=mysqli_fetch_object($SelectMapping4)){
-						echo '<a href="ofertas.php" >'.$Mapping4->title_pro.'</a><br/>';
+						echo '<a href="ofertas.php?id='.$Mapping4->id_pro.'" >'.$Mapping4->title_pro.'</a><br/>';
 					}
 				?>
 			</div>			

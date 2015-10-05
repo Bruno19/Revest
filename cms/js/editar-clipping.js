@@ -4,7 +4,7 @@
 		if(c.title.value<3 || c.title.value>120){
 			$('.resp').html('<label class="erro">O campo Título deve possuir de 3 a 120 caracteres!</label>');
 			c.title.focus();
-		}else
+		}/*else
 		if(c.url.value<3 || c.url.value>150){
 			$('.resp').html('<label class="erro">O campo URL deve possuir de 3 a 150 caracteres!</label>');
 			c.url.focus();
@@ -12,7 +12,7 @@
 		if(c.content.value<20){
 			$('.resp').html('<label class="erro">O campo Conteúdo deve possuir no mínimo 20 caracteres!</label>');
 			c.content.focus();
-		}else{
+		}*/else{
 			var data = {
 				id: c.id.value,
 				title: c.title.value,

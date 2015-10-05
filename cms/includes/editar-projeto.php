@@ -36,7 +36,40 @@
 	</form>	
 	
 	<div class="Linha">
-		<?php $Project->SelectImages($conn, $_GET['id']);?>
+		<?php 
+			$Project->SelectImages($conn, $_GET['id']);			
+		
+			
+			if(isset($_POST['alter-parter'])){				
+				
+				include_once('php/escapeSQL.php');
+				$post = EscapeArray($_POST);
+				
+				if($_FILES['imagem']['error']!=4){
+					include_once('class/resize.class.php');
+					$Img = $_FILES['imagem'];
+					if($Img['type']=='image/jpeg' || $Img['type']=='image/png'){						
+					
+						move_uploaded_file($Img['tmp_name'], 'imagens/'.$post['name']);			
+						
+						$resizeObj = new resize('imagens/'.$post['name']);	
+						$resizeObj -> resizeImage(900, 450, 'crop');		
+						$resizeObj -> saveImage('imagens/projetos/'.$post['name'], 95);
+						
+					//	unlink('imagens/'.$post['name']);
+						
+					}	
+				}				
+				
+				$UpDateLink = mysqli_query($conn, "UPDATE images_pr SET text_im='$post[linkimage]' WHERE id_im=$post[id]");
+				
+				if($UpDateLink){
+					echo '<script type="text/javascript">location.href="";</script>';
+				}else{
+					echo '<script type="text/javascript">alert("Erro ao editar!");</script>';
+				}
+			}
+		?>
 		<div class="esp"></div>
 	</div>
 </section>

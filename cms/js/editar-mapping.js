@@ -12,7 +12,7 @@
 		if(c.cidades.value=='null'){
 			$('.resp').html('<label class="erro">Selecione uma cidade!</label>');
 			c.cidades.focus();
-		}else
+		}/*else
 		if(c.info.value<3 || c.info.value>150){
 			$('.resp').html('<label class="erro">O campo Informação deve possuir de 3 a 150 caracteres!</label>');
 			c.info.focus();
@@ -24,7 +24,7 @@
 		if(c.cont2.value<3 || c.cont2.value>150){
 			$('.resp').html('<label class="erro">O campo Website / Contato 2 deve possuir de 3 a 150 caracteres!</label>');
 			c.cont2.focus();
-		}else{
+		}*/else{
 			var data = {
 				id: c.id.value,
 				name: c.title.value,
