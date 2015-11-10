@@ -21,6 +21,21 @@
                     <div class="info_direita">
 						<form name="selectcidades" method="post" onsubmit="return false">
 							<select name="cidade" onchange="CarregarResultados(this.value)" id="SelectCidades">
+								<?php
+									if(isset($_GET)){
+										if(is_numeric($_GET['id'])){
+											$SelectCid = mysqli_query($conn, "
+												SELECT a.*, b.* FROM cidades AS a INNER JOIN mapping AS b WHERE id_ma=$_GET[id] AND a.id=b.id_ci
+											");
+											
+											$Cid = mysqli_fetch_object($SelectCid);
+											
+											echo '
+												<option value="'.$Cid->id_ci.'" selected>'.$Cid->cidade.'</option>
+											';
+										}
+									}
+								?>
 								<option value="null">Selecione uma cidade</option>   
 							</select>
 							

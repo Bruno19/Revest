@@ -10,7 +10,36 @@
 		transition: 0.5s;
     }	
 </style>
-
+<script type="text/javascript">
+<?php
+	if(isset($_GET)){
+	if(is_numeric($_GET['id'])):
+	?>
+		window.onload = function(){
+			var id = <?php echo $_GET['id'];?>;
+			$.post('cms/php/mapa.php', {'action':'search-uf', 'id':id}).done(function(result){				
+				$('#'+result).css({
+					'fill':'#fdd631',
+				});
+			});
+		}
+	<?php
+	endif;
+			
+	}
+?>
+	$(document).ready(function(){
+		$('path, polygon').on('click', function(){
+			$('path, polygon').css({
+				'fill':'#ccc',
+			});
+			
+			$(this).css({
+				'fill':'#fdd631',
+			});
+		});		
+	});
+</script>
 <svg version="1.1" x="0px" y="0px" width="390px" height="390px" viewBox="0 0 595.276 595.276" enable-background="new 0 0 595.276 595.276" xml:space="preserve">
     <path onclick="CapturarEstado('ma')"  id="ma" d="M421.671,100.519l3.093,0.268l2.689,2.286l2.285,0.27l3.633,0.135l2.958,1.21l1.884,2.556l3.765,2.824
 c0,0,1.883,2.555,1.883,2.959c0,0.403,0.537,2.286,0.537,2.824s0,2.824-0.402,2.958c-0.404,0.135-2.958,2.689-2.958,2.689

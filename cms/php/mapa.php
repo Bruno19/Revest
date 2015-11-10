@@ -33,6 +33,10 @@
 		if($_POST['action']=='edit'){
 			$Mapa->UpdateMapping($conn, $post['data']['id'], $post['data']);
 		}
+		
+		if($_POST['action']=='search-uf'){
+			$Mapa->SearchUF($conn, $post['id']);
+		}
 	}
 	
 ?>

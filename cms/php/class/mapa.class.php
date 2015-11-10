@@ -236,5 +236,12 @@
 				';
 			}
 		}
+		
+		function SearchUF($Conn, $ID){
+			$Select = mysqli_query($Conn, "SELECT * FROM mapping WHERE id_ma=$ID");
+			$Dados = mysqli_fetch_object($Select);
+			
+			echo strtolower($Dados->uf_ma);
+		}
 	}
 ?>
