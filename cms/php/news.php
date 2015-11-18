@@ -13,6 +13,7 @@
 			$Imagens = array();	
 			
 			if(!isset($_POST['image1'])){
+				
 				if($_FILES['image1']['type']=='image/jpeg'){
 					$Imagens[1]=$_FILES['image1'];
 				}

@@ -35,16 +35,10 @@
 			 <div class="centraliza_barra">					
 				 
 				 <div class="galeria">
-					<div class="next_back">
-						<h1><?php echo $Project->name_pr;?></h1>
-						<div class="setas">
-						   <a href=""> <img src="imagens/icones/seta-projetos.png">
-							<img src="imagens/icones/seta-projetos_direita.png"> </a>
-						</div>
-					</div>
+
 					 <?php include ("galeria/galeria.php") ?>
 				  </div>
-				 
+			
 				 <div class="outros">
 					 <h2>Outros Projetos</h2>
 					<ul>

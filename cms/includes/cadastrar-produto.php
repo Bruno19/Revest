@@ -27,7 +27,7 @@
 		</div>		
 		
 		<div class="Linha">
-			<input type="file" name="image" class="Campo Btn CadEmp AlterDs" accept="image/jpeg"/>
+    		<input type="file" name="image" class="Campo Btn CadEmp AlterDs" accept="image/jpeg"/>
 		</div>
 		
 		<div class="Linha">

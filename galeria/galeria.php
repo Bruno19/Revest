@@ -1,4 +1,4 @@
-﻿    <!-- it works the same with all jquery version from 1.x to 2.x -->
+    <!-- it works the same with all jquery version from 1.x to 2.x -->
     <script type="text/javascript" src="galeria/js/jquery-1.9.1.min.js"></script>
     <!-- use jssor.slider.mini.js (40KB) instead for release -->
     <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
@@ -61,7 +61,7 @@
                 ];
 
             var options = {
-                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlay: false,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
                 $AutoPlayInterval: 1500,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
                 $PauseOnHover: 1,                                //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
 
@@ -114,7 +114,21 @@
     <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
     <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 774px;
         height: 500px;  overflow: hidden;">
-
+        
+					<div class="next_back" style="z-index:9908;position:absolute;">
+						<h1><?php echo $Project->name_pr;?></h1>
+						
+                                <div class="setas" style="background: url('imagens/icones/setas.png');">
+                              
+                                  <img src="imagens/icones/seta-projetos.png" u="arrowleft" style="cursor:pointer;">
+                 
+                                  <img src="imagens/icones/seta-projetos_direita.png" u="arrowright"  style="cursor:pointer;"> 
+                                    	
+                                </div>
+                                
+                            
+					</div>
+       
         <!-- Loading Screen -->
         <div u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
@@ -176,11 +190,7 @@
             .jssora05r.jssora05rdn { background-position: -310px -40px; }
         </style>
         <!-- Arrow Left -->
-        <span u="arrowleft" class="jssora05l" style="top: 158px; left: 8px;">
-        </span>
-        <!-- Arrow Right -->
-        <span u="arrowright" class="jssora05r" style="top: 158px; right: 8px">
-        </span>
+
         <!--#endregion Arrow Navigator Skin End -->
         <!--#region Thumbnail Navigator Skin Begin -->
         <!-- Help: http://www.jssor.com/development/slider-with-thumbnail-navigator-jquery.html -->
@@ -285,4 +295,5 @@
         </div>
         <!--#endregion Thumbnail Navigator Skin End -->
         <a style="display: none" href="http://www.jssor.com">Image Slider</a>
-    </div>
+  
+</div>
